@@ -2,13 +2,13 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/SrGuzz/moeda_estudantil)
 ![GitHub forks](https://img.shields.io/github/forks/SrGuzz/moeda_estudantil)
 
-# 🚗 AutoLux Rental - Sistema de Locadora de Veículos
+# Sistema de Moeda Estudantil
 
-Este é um projeto full-stack de um sistema de gerenciamento para uma locadora de veículos, desenvolvido como parte de um estudo aprofundado em tecnologias de front-end e back-end. A plataforma atende a dois tipos de usuários: **Clientes**, que podem solicitar e acompanhar aluguéis, e **Agentes**, que gerenciam as operações.
+
 
 ## 🚀 Tecnologias Utilizadas
 
-O projeto foi construído com uma stack moderna, separando as responsabilidades entre o cliente (front-end) e o servidor (back-end).
+
 
 ### **Front-end:**
 
