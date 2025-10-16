@@ -1,4 +1,4 @@
-![GitHub repo size](https://img.shields.io/github.com/SrGuzz/moeda_estudantil)
+![GitHub repo size](https://img.shields.io/github/repo-size/SrGuzz/moeda_estudantil)
 ![GitHub language count](https://img.shields.io/github/languages/count/SrGuzz/moeda_estudantil)
 ![GitHub forks](https://img.shields.io/github/forks/SrGuzz/moeda_estudantil)
 
@@ -85,11 +85,9 @@ Caso queira entrar em contato:
 - 🔗 LinkedIn: [Davi Benjamim Guimarães](https://www.linkedin.com/in/davi-benjamim-guimar%C3%A3es-b82741288/)
 - 🐙 GitHub: [ArtMix532](https://github.com/ArtMix532)
 
-
 - ✉️ Email: `albertluis123y88@gmail.com`
 - 🔗 LinkedIn: [Albert Luis Pereira de Jesus](https://www.linkedin.com/in/albert-luis/)
 - 🐙 GitHub: [SrGuzz](https://github.com/SrGuzz)
-
 
 - ✉️ Email: `jonasrmartins17@gmail.com`
 - 🔗 LinkedIn: [Jonas Rafael Martins](https://www.linkedin.com/in/SEU-LINKEDIN-AQUI/)
