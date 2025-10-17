@@ -34,7 +34,7 @@
                         <x-slot:action>
                             <div>
                                 <button class="cursor-pointer" x-on:click="show = !show">
-                                    <span class="text-base font-semibold text-primary-500" x-text="name"></span>
+                                    <span class="text-base font-semibold dark:text-neutral-50" x-text="name"></span>
                                 </button>
                             </div>
                         </x-slot:action>
@@ -54,9 +54,7 @@
                         <img src="{{ asset('/assets/images/tsui.png') }}" width="40" height="40" />
                     </div>
                 </x-slot:brand>
-                <x-side-bar.item text="Dashboard" icon="home" :route="route('dashboard')" />
-                <x-side-bar.item text="Users" icon="users" :route="route('users.index')" />
-                <x-side-bar.item text="Welcome Page" icon="arrow-uturn-left" :route="route('welcome')" />
+                <x-side-bar.item text="Alunos" icon="users" :route="route('alunos.index')" />
             </x-side-bar>
         </x-slot:menu>
         {{ $slot }}

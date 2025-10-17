@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Alunos\Index as AlunosIndex;
 use App\Livewire\User\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Users\Index;
@@ -12,6 +13,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/users', Index::class)->name('users.index');
 
     Route::get('/user/profile', Profile::class)->name('user.profile');
+
+    Route::get('/alunos', AlunosIndex::class)->name('alunos.index');
 });
 
 require __DIR__.'/auth.php';
