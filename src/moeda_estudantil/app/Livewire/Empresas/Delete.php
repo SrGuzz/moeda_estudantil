@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Livewire\Alunos;
+namespace App\Livewire\Empresas;
 
 use App\Livewire\Traits\Alert;
-use App\Models\Aluno;
+use App\Models\Empresa;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
@@ -13,20 +13,20 @@ class Delete extends Component
     use Interactions;
     use Alert;
 
-    public Aluno $aluno;
+    public Empresa $empresa;
 
     public function render()
     {
-        return view('livewire.alunos.delete');
+        return view('livewire.empresas.delete');
     }
 
-    #[On('delete::aluno')]    
-    public function load(Aluno $aluno)
+    #[On('delete::empresa')]    
+    public function load(Empresa $empresa)
     {
-        $this->aluno = $aluno;
+        $this->empresa = $empresa;
 
         $this->dialog()
-        ->question('Cuidado!', 'Quer apagar o aluno ' . $aluno->user->name . '?')
+        ->question('Cuidado!', 'Quer apagar a empresa ' . $empresa->nome . '?')
         ->confirm('Confirmar', 'confirmed')
         ->cancel('Cancelar')
         ->send();
@@ -34,9 +34,9 @@ class Delete extends Component
 
     public function confirmed(): void
     {
-        $this->aluno->endereco->delete();
-        $this->aluno->user->delete();
-        $this->reset('aluno');
+        $this->empresa->endereco->delete();
+        $this->empresa->delete();
+        $this->reset('empresa');
         $this->success();
         $this->dispatch('deleted');
     }

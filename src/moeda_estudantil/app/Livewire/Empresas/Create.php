@@ -1,87 +1,59 @@
 <?php
 
-namespace App\Livewire\Alunos;
+namespace App\Livewire\Empresas;
 
 use App\Livewire\Traits\Alert;
-use App\Models\Aluno;
+use App\Models\Empresa;
 use App\Models\Endereco;
-use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Validation\Rule;
-use Livewire\Attributes\On;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
-class Update extends Component
+class Create extends Component
 {
     use Alert;
+    use Interactions;
 
-    public ?Aluno $aluno;
+    public Empresa $empresa;
 
-    public ?User $user;
+    public Endereco $endereco;
 
-    public ?Endereco $endereco;
-
-    public ?string $bairro;
-
-    public ?string $password = null;
-
-    public ?string $password_confirmation = null;
+    public $bairro;
 
     public bool $modal = false;
 
-    public function render(): View
+    public function mount(): void
     {
-        return view('livewire.alunos.update');
+        $this->empresa = new Empresa();
+        $this->endereco = new Endereco();
     }
 
-    #[On('load::aluno')]
-    public function load(Aluno $aluno): void
+    public function render(): View
     {
-        $this->aluno = $aluno;
-        $this->user = $this->aluno->user;
-        $this->endereco = $this->aluno->endereco;
-        $this->bairro = $this->endereco->bairro;
-
-        $this->modal = true;
+        return view('livewire.empresas.create');
     }
 
     public function rules(): array
     {
         return [
-            'user.name' => [
+            'empresa.nome' => [
                 'required',
                 'string',
                 'max:255'
             ],
-            'user.email' => [
+            'empresa.email' => [
                 'required',
                 'string',
                 'email',
                 'max:255',
-                Rule::unique('users', 'email')->ignore($this->user->id),
+                'unique:empresas,email',
             ],
-            'password' => [
-                'nullable',
-                'string',
-                'min:8',
-                'confirmed'
-            ],
-            'aluno.rg' => [
-                'min:6',
+            'empresa.cnpj' => [
                 'required',
                 'string',
-                'unique:alunos,rg,' . $this->aluno->id
-            ],
-            'aluno.instituicao' => [
-                'min:3',
-                'string',
-                'required',
-            ],
-            'aluno.curso' => [
-                'min:3',
-                'string',
-                'required',
+                'size:14',
+                'unique:empresas,cnpj',
             ],
             'endereco.rua' => [
                 'required',
@@ -118,18 +90,15 @@ class Update extends Component
     {
         $this->validate();
 
-        $this->user->password = when($this->password !== null, bcrypt($this->password), $this->user->password);
-        $this->user->save();
-
         $this->endereco->bairro = $this->bairro;
         $this->endereco->save();
 
-        $this->aluno->save();
+        $this->empresa->endereco_id = $this->endereco->id;
+        $this->empresa->save();
 
-        $this->dispatch('updated');
+        $this->dispatch('created');
 
-        $this->resetExcept(['aluno', 'user']);
-
+        $this->reset();
         $this->success();
     }
 

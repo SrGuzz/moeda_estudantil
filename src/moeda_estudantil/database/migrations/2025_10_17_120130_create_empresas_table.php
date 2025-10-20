@@ -11,20 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alunos', function (Blueprint $table) {
+        Schema::create('empresas', function (Blueprint $table) {
             $table->id();
-            $table->string('rg')->unique();
-            $table->string('curso');
-            $table->string('instituicao');
-            $table->decimal('saldo_moedas', 12, 2)->default(0);
-            $table->unsignedBigInteger('user_id');
+            $table->string('nome');
+            $table->string('email')->unique();
+            $table->string('cnpj')->unique();
             $table->unsignedBigInteger('endereco_id')->unique()->nullable();
             $table->timestamps();
-
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
 
             $table->foreign('endereco_id')
                 ->references('id')
@@ -38,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alunos');
+        Schema::dropIfExists('empresas');
     }
 };

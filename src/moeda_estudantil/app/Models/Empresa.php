@@ -4,21 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Aluno extends Model
+class Empresa extends Model
 {
     protected $fillable = [
-        'rg',
-        'curso',
-        'instituicao',
-        'saldo_moedas',
-        'user_id',
+        'nome',
+        'email',
+        'cnpj',
         'endereco_id',
     ];
-
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 
     public function endereco()
     {

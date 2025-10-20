@@ -13,19 +13,14 @@ return new class extends Migration
     {
         Schema::create('enderecos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('aluno_id');
             $table->string('rua');
             $table->string('numero');
             $table->string('cidade');
             $table->string('estado');
+            $table->string('bairro');
             $table->string('cep');
             $table->string('complemento')->nullable();
             $table->timestamps();
-
-            $table->foreign('aluno_id')
-                ->references('id')
-                ->on('alunos')
-                ->cascadeOnDelete();
         });
     }
 

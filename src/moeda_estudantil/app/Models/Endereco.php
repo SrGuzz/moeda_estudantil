@@ -13,11 +13,16 @@ class Endereco extends Model
         'estado',
         'cep',
         'complemento',
-        'aluno_id',
+        'bairro'
     ];
 
     public function aluno()
     {
-        return $this->belongsTo(Aluno::class);
+        return $this->hasOne(Aluno::class);
+    }
+
+    public function empresa()
+    {
+        return $this->hasOne(Empresa::class);
     }
 }

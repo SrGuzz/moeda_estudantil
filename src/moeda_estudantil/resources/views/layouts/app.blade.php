@@ -55,6 +55,7 @@
                     </div>
                 </x-slot:brand>
                 <x-side-bar.item text="Alunos" icon="users" :route="route('alunos.index')" />
+                <x-side-bar.item text="Empresas Parceiras" icon="building-office-2" :route="route('empresas.index')" />
             </x-side-bar>
         </x-slot:menu>
         {{ $slot }}
