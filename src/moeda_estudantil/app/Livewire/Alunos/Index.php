@@ -20,7 +20,7 @@ class Index extends Component
 
     public array $sort = [
         'column'    => 'user_name',
-        'direction' => 'desc',
+        'direction' => 'asc',
     ];
 
     public array $headers = [
@@ -39,11 +39,30 @@ class Index extends Component
     }
 
     #[Computed()]
-    public function rows(): LengthAwarePaginator
+    public function alunos(): LengthAwarePaginator
     {
         return Aluno::query()
             ->whereNotIn('id', [Auth::id()])
-            ->when($this->search !== null, fn (Builder $query) => $query->whereAny(['rg', 'instituicao', 'curso', 'saldo_moedas'], 'like', '%'.trim($this->search).'%'))
+            ->when(filled($this->search), function ($q) {
+                $term = '%'.trim($this->search).'%';
+
+                $q->where(function ($q) use ($term) {
+                    // colunas locais da tabela alunos
+                    $q->whereAny(['rg', 'instituicao', 'curso', 'saldo_moedas'], 'like', $term)
+
+                    // colunas do relacionamento user()
+                    ->orWhereRelation('user', 'name',  'like', $term)
+                    ->orWhereRelation('user', 'email', 'like', $term)
+                    ->orWhereRelation('endereco', 'cep', 'like', $term)
+                    ->orWhereRelation('endereco', 'numero', 'like', $term)
+                    ->orWhereRelation('endereco', 'rua', 'like', $term)
+                    ->orWhereRelation('endereco', 'bairro', 'like', $term)
+                    ->orWhereRelation('endereco', 'cidade', 'like', $term)
+                    ->orWhereRelation('endereco', 'estado', 'like', $term)
+                    ->orWhereRelation('endereco', 'estado', 'like', $term)
+                    ->orWhereRelation('endereco', 'complemento', 'like', $term);
+                });
+            })
             ->orderBy(...array_values($this->sort))
             ->withAggregate('user', 'name')
             ->withAggregate('user', 'email')

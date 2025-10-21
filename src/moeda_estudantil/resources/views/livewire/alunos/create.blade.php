@@ -1,7 +1,6 @@
 <div>
-    <div class="flex justify-end">
-        <x-button :text="'Criar Aluno'" wire:click="$toggle('modal')" sm />
-    </div>
+    
+    <x-button class="!py-1.5" :text="'Criar Aluno'" wire:click="$toggle('modal')" />
 
     <x-modal :title="'Criar Aluno'" wire x-on:open="setTimeout(() => $refs.name.focus(), 250)">
         <form id="user-create" wire:submit="save" class="space-y-4">

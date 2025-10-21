@@ -1,22 +1,86 @@
 <div>
-    <x-card>
-        <div class="mb-2 mt-4">
-            <livewire:alunos.create @created="$refresh" />
+        <div class="mb-2 mt-4 flex gap-x-5 justify-between items-end">
+            <div>
+                <p class="text-3xl font-semibold">Alunos Cadastrados</p>
+                <p class="text-neutral-500">Total de {{count($this->alunos)}} alunos cadastrados</p>
+            </div>
+            <div class="flex items-end gap-5">
+                <livewire:alunos.create @created="$refresh" />
+                <x-input class="" icon="magnifying-glass" position="right" wire:model.live.debounce="search"/>
+            </div>
         </div>
 
-        <x-table :$headers :$sort :rows="$this->rows" paginate simple-pagination filter loading :quantity="[2, 5, 15, 25]">
-            @interact('column_created_at', $row)
-            {{ $row->created_at->diffForHumans() }}
+        <div class="grid grid-cols-2 mt-10 gap-10">
+            @foreach($this->alunos as $aluno)
+                <div class="hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
+                    <x-card >
+                        <div class="grid gap-y-5">
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <x-avatar class="mr-5" color="orange" borderless />
+                                    <div>
+                                        <p class="text-xl font-bold">{{$aluno->user->name}}</p>
+                                        <div class="text-neutral-500 flex gap-x-2">
+                                            <x-icon name="envelope" class="h-5 w-5" outline/>
+                                            <p>{{$aluno->user->email}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-end">
+                                    <x-badge text="{{$aluno->rg}}" icon="credit-card" position="left" color="orange" light />
+                                </div>
+                            </div>
+        
+                            <hr class="text-neutral-300">
+                            
+                            <div class="flex gap-x-4 items-center">
+                                <x-icon name="building-office-2" class="h-6 w-6 text-orange-600" />
+                                <div>
+                                    <p class="font-bold">{{$aluno->instituicao}}</p>
+                                    <div class="flex gap-x-1">
+                                        <x-icon name="academic-cap" class="h-5 w-5 text-orange-400" outline/>
+                                        <p class="text-neutral-500">{{$aluno->curso}}</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <hr class="text-neutral-300">
+                            
+                            <div class="flex gap-x-4">
+                                <x-icon name="map-pin" class="h-6 w-6 text-orange-400" outline/>
+                                <div>
+                                    <p>{{$aluno->endereco->rua . ', ' . $aluno->endereco->numero . ' - ' . $aluno->endereco->complemento}}</p>
+                                    <p class="text-neutral-500">{{$aluno->endereco->bairro . ', ' . $aluno->endereco->cidade . ' - ' . $aluno->endereco->estado}}</p>
+                                    <x-badge text="{{'CEP: ' . $aluno->endereco->cep}}" color="neutral" light />
+                                </div>
+                            </div>  
+        
+                            <hr class="text-neutral-300">
+                            
+                            <div class="flex justify-end gap-4">
+                                <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
+                                <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
+                            </div>
+                        </div>
+                    </x-card>
+                </div>
+            @endforeach
+        </div>
+
+        {{-- <x-table :$headers :$sort :rows="$this->alunos" paginate simple-pagination filter loading :quantity="[2, 5, 15, 25]">
+            @interact('column_created_at', $aluno)
+            {{ $aluno->created_at->diffForHumans() }}
             @endinteract
 
-            @interact('column_action', $row)
+            @interact('column_action', $aluno)
             <div class="flex gap-4">
-                <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $row->id }}'})" light/>
-                <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $row->id }}'})" light/>
+                <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
+                <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
             </div>
             @endinteract
-        </x-table>
-    </x-card>
+        </x-table> --}}
+
+    
 
     <livewire:alunos.update @updated="$refresh" />
     <livewire:alunos.delete @deleted="$refresh" />

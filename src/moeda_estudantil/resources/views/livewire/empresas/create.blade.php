@@ -1,6 +1,6 @@
 <div>
     <div class="flex justify-end">
-        <x-button :text="'Criar Empresa'" wire:click="$toggle('modal')" sm />
+        <x-button class="!py-1.5" :text="'Criar Empresa'" wire:click="$toggle('modal')" />
     </div>
 
     <x-modal :title="'Dados da Empresa'" wire x-on:open="setTimeout(() => $refs.name.focus(), 250)">

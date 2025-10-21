@@ -37,10 +37,27 @@ class Index extends Component
     }
 
     #[Computed()]
-    public function rows(): LengthAwarePaginator
+    public function empresas(): LengthAwarePaginator
     {
         return Empresa::query()
-            ->when($this->search !== null, fn (Builder $query) => $query->whereAny(['nome', 'email', 'cnpj'], 'like', '%'.trim($this->search).'%'))
+            ->when(filled($this->search), function ($q) {
+                $term = '%'.trim($this->search).'%';
+
+                $q->where(function ($q) use ($term) {
+                    // colunas locais da tabela alunos
+                    $q->whereAny(['nome', 'email', 'cnpj'], 'like', $term)
+
+                    // colunas do relacionamento user()
+                    ->orWhereRelation('endereco', 'cep', 'like', $term)
+                    ->orWhereRelation('endereco', 'numero', 'like', $term)
+                    ->orWhereRelation('endereco', 'rua', 'like', $term)
+                    ->orWhereRelation('endereco', 'bairro', 'like', $term)
+                    ->orWhereRelation('endereco', 'cidade', 'like', $term)
+                    ->orWhereRelation('endereco', 'estado', 'like', $term)
+                    ->orWhereRelation('endereco', 'estado', 'like', $term)
+                    ->orWhereRelation('endereco', 'complemento', 'like', $term);
+                });
+            })
             ->orderBy(...array_values($this->sort))
             ->withAggregate('endereco', 'estado')
             ->withAggregate('endereco', 'cidade')

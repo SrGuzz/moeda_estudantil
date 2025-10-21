@@ -33,9 +33,8 @@
                     <x-dropdown>
                         <x-slot:action>
                             <div>
-                                <button class="cursor-pointer" x-on:click="show = !show">
-                                    <span class="text-base font-semibold dark:text-neutral-50" x-text="name"></span>
-                                </button>
+                                
+                                <button x-on:click="show = !show"><x-avatar class="cursor-pointer hover:bg-orange-500/80" text="{{Str::upper(substr(auth()->user()->name, 0, 2))}}" color="orange" /></button>
                             </div>
                         </x-slot:action>
                         <form method="POST" action="{{ route('logout') }}">
@@ -51,7 +50,7 @@
             <x-side-bar smart collapsible>
                 <x-slot:brand>
                     <div class="mt-8 flex items-center justify-center">
-                        <img src="{{ asset('/assets/images/tsui.png') }}" width="40" height="40" />
+                        <img src="{{ asset('/assets/images/logo.png') }}" width="200" height="200" />
                     </div>
                 </x-slot:brand>
                 <x-side-bar.item text="Alunos" icon="users" :route="route('alunos.index')" />
