@@ -1,5 +1,5 @@
 <div>
-    <x-card>
+    
         <div class="mb-2 mt-4 flex gap-x-5 justify-between items-end">
             <div>
                 <p class="text-3xl font-semibold">Empresas Cadastradas</p>
@@ -31,9 +31,9 @@
                                     <x-badge text="{{preg_replace('/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/', '$1.$2.$3/$4-$5', $empresa->cnpj)}}" icon="document-text" position="left" color="orange" light />
                                 </div>
                             </div>
-        
+
                             <hr class="text-neutral-300">
-                            
+
                             <div class="flex gap-x-4">
                                 <x-icon name="map-pin" class="h-6 w-6 text-orange-400" outline/>
                                 <div>
@@ -41,10 +41,10 @@
                                     <p class="text-neutral-500">{{$empresa->endereco->bairro . ', ' . $empresa->endereco->cidade . ' - ' . $empresa->endereco->estado}}</p>
                                     <x-badge text="{{'CEP: ' . $empresa->endereco->cep}}" color="neutral" light />
                                 </div>
-                            </div>  
-        
+                            </div>
+
                             <hr class="text-neutral-300">
-                            
+
                             <div class="flex justify-end gap-4">
                                 <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::empresa', { 'empresa' : '{{ $empresa->id }}'})" light/>
                                 <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::empresa', { 'empresa' : '{{ $empresa->id }}'})" light/>
@@ -67,7 +67,7 @@
             </div>
             @endinteract
         </x-table> --}}
-    </x-card>
+
 
     <livewire:empresas.update @updated="$refresh" />
     <livewire:empresas.delete @deleted="$refresh" />
