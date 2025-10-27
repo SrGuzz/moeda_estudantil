@@ -2,7 +2,7 @@
     
         <div class="mb-2 mt-4 flex gap-x-5 justify-between items-end">
             <div>
-                <p class="text-3xl font-semibold">Empresas Cadastradas</p>
+                <p class="text-3xl font-semibold dark:text-neutral-50">Empresas Cadastradas</p>
                 <p class="text-neutral-500">Total de {{count($this->empresas)}} empresas cadastradas</p>
             </div>
             <div class="flex items-end gap-5">

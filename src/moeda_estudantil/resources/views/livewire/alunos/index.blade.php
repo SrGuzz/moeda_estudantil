@@ -1,7 +1,7 @@
 <div>
         <div class="mb-2 mt-4 flex gap-x-5 justify-between items-end">
             <div>
-                <p class="text-3xl font-semibold">Alunos Cadastrados</p>
+                <p class="text-3xl font-semibold dark:text-neutral-50">Alunos Cadastrados</p>
                 <p class="text-neutral-500">Total de {{count($this->alunos)}} alunos cadastrados</p>
             </div>
             <div class="flex items-end gap-5">
