@@ -12,17 +12,13 @@ Uma nova transação foi registrada no sistema.
 **💰 Valor:** R$ {{ $transacao['moedas'] }}
 @endcomponent
 
-@if ($tipo === 'enviada')
+@if ($transacao['tipo'] === 'enviada')
 Essa transação foi **enviada** por você (professor).  
 O valor foi transferido com sucesso para o aluno **{{ $transacao['aluno'] }}**.
 @else
 Você **recebeu** uma transação de **{{ $transacao['professor'] }}**.  
 O valor já está disponível no seu saldo.
 @endif
-
-@component('mail::button', ['url' => $url])
-Ver Detalhes da Transação
-@endcomponent
 
 Obrigado por usar nosso sistema!  
 **{{ config('app.name') }}**
