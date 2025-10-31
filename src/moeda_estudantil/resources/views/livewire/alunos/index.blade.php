@@ -15,26 +15,38 @@
                 <div class="hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
                     <x-card >
                         <div class="grid gap-y-5">
-                            <div class="flex justify-between">
-                                <div class="flex">
-                                    <x-avatar class="mr-5" color="orange" borderless />
-                                    <div>
-                                        <p class="text-xl font-bold">{{$aluno->user->name}}</p>
-                                        <div class="text-neutral-500 flex gap-x-2">
-                                            <x-icon name="envelope" class="h-5 w-5" outline/>
-                                            <p>{{$aluno->user->email}}</p>
+                            <div class="grid gap-5">
+                                <div class="flex justify-between">
+                                    <div class="flex">
+                                        <x-avatar class="mr-5" color="orange" borderless />
+                                        <div>
+                                            <p class="text-xl font-bold">{{$aluno->user->name}}</p>
+                                            <div class="text-neutral-500 flex gap-x-2">
+                                                <x-icon name="envelope" class="h-5 w-5" outline/>
+                                                <p>{{$aluno->user->email}}</p>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="text-end">
+                                        <x-badge text="{{$aluno->rg}}" icon="identification" position="left" color="orange" light />
+                                    </div>
                                 </div>
-                                <div class="text-end">
-                                    <x-badge text="{{$aluno->rg}}" icon="credit-card" position="left" color="orange" light />
+
+                                <div class="flex justify-between bg-orange-100/80 py-5 rounded-md">
+                                    <div class="flex gap-4 ml-3">
+                                        <x-icon name="currency-dollar" class="h-8 w-8 text-orange-500" outline/>
+                                        <p class="text-xl text-neutral-500 font-semibold">Saldo</p>
+                                    </div>
+                                    <div class="mr-3">
+                                        <p class="bg-orange-500 px-5 py-1 rounded-3xl font-bold text-neutral-50">{{$aluno->saldo_moedas}}</p>
+                                    </div>
                                 </div>
                             </div>
         
                             <hr class="text-neutral-300">
                             
                             <div class="flex gap-x-4 items-center">
-                                <x-icon name="building-office-2" class="h-6 w-6 text-orange-600" />
+                                <x-icon name="building-office-2" class="h-6 w-6 text-orange-500" />
                                 <div>
                                     <p class="font-bold">{{$aluno->instituicao}}</p>
                                     <div class="flex gap-x-1">
@@ -58,6 +70,9 @@
                             <hr class="text-neutral-300">
                             
                             <div class="flex justify-end gap-4">
+                                @if (auth()->user()->professor)
+                                <x-button.circle color="green" icon="banknotes" wire:click="$dispatch('transacao::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>    
+                                @endif
                                 <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
                                 <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
                             </div>
@@ -67,21 +82,7 @@
             @endforeach
         </div>
 
-        {{-- <x-table :$headers :$sort :rows="$this->alunos" paginate simple-pagination filter loading :quantity="[2, 5, 15, 25]">
-            @interact('column_created_at', $aluno)
-            {{ $aluno->created_at->diffForHumans() }}
-            @endinteract
-
-            @interact('column_action', $aluno)
-            <div class="flex gap-4">
-                <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
-                <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
-            </div>
-            @endinteract
-        </x-table> --}}
-
-    
-
     <livewire:alunos.update @updated="$refresh" />
     <livewire:alunos.delete @deleted="$refresh" />
+    <livewire:alunos.transacao @updated="$refresh" />
 </div>

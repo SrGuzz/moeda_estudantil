@@ -17,4 +17,9 @@ class Empresa extends Model
     {
         return $this->belongsTo(Endereco::class);
     }
+
+    public function professor()
+    {
+        return $this->hasMany(Empresa::class);
+    }
 }

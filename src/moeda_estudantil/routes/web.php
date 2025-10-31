@@ -2,6 +2,8 @@
 
 use App\Livewire\Alunos\Index as AlunosIndex;
 use App\Livewire\Empresas\Index as EmpresasIndex;
+use App\Livewire\Professores\Index as ProfessoresIndex;
+use App\Livewire\Transacoes\Index as TransacoesIndex;
 use App\Livewire\User\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Users\Index;
@@ -18,6 +20,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/alunos', AlunosIndex::class)->name('alunos.index');
 
     Route::get('/empresas-parceiras', EmpresasIndex::class)->name('empresas.index');
+    
+    Route::get('/professores', ProfessoresIndex::class)->name('professores.index');
+
+    Route::get('/transacoes', TransacoesIndex::class)->name('transacoes.index');
 });
 
 require __DIR__.'/auth.php';

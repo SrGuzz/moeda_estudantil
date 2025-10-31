@@ -24,4 +24,9 @@ class Aluno extends Model
     {
         return $this->belongsTo(Endereco::class);
     }
+
+    public function transacoes()
+    {
+        return $this->hasMany(Transacao::class);
+    }
 }

@@ -18,7 +18,9 @@
                         <div class="grid gap-y-5">
                             <div class="flex justify-between">
                                 <div class="flex">
-                                    <x-avatar class="mr-5" color="orange" borderless />
+                                    <div class="rounded-full bg-orange-500 h-12 w-12 flex justify-center items-center mr-3">
+                                        <x-icon name="building-office-2" class="text-neutral-50 h-8 w-8"/>
+                                    </div>
                                     <div>
                                         <p class="text-xl font-bold">{{$empresa->nome}}</p>
                                         <div class="text-neutral-500 flex gap-x-2">

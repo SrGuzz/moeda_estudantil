@@ -40,6 +40,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown.items :text="__('Profile')" :href="route('user.profile')" />
+                            <x-dropdown.items :text="__('Profile')" :href="route('user.profile')" />
                             <x-dropdown.items :text="__('Logout')" onclick="event.preventDefault(); this.closest('form').submit();" separator />
                         </form>
                     </x-dropdown>
@@ -55,6 +56,8 @@
                 </x-slot:brand>
                 <x-side-bar.item text="Alunos" icon="users" :route="route('alunos.index')" />
                 <x-side-bar.item text="Empresas Parceiras" icon="building-office-2" :route="route('empresas.index')" />
+                <x-side-bar.item text="Professores" icon="academic-cap" :route="route('professores.index')" />
+                <x-side-bar.item text="Transacoes" icon="currency-dollar" :route="route('transacoes.index')" />
             </x-side-bar>
         </x-slot:menu>
         {{ $slot }}
