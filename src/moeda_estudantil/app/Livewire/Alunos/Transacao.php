@@ -99,10 +99,12 @@ class Transacao extends Component
         $transacao['moedas'] = $this->transacao->moedas;
         $transacao['data'] = $this->transacao->created_at->diffForHumans();
         $transacao['destinatario'] = $this->transacao->professor->user->name;
+        $transacao['tipo'] = 'enviada';
 
         Mail::to($this->transacao->professor->user->email)->send(new MailTransacao($transacao));
 
         $transacao['destinatario'] = $this->transacao->aluno->user->name;
+        $transacao['tipo'] = 'recebida';
 
         Mail::to($this->transacao->aluno->user->email)->send(new MailTransacao($transacao));
 
