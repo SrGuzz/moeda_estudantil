@@ -5,6 +5,7 @@ namespace App\Livewire\Empresas;
 use App\Livewire\Traits\Alert;
 use App\Models\Empresa;
 use App\Models\Endereco;
+use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\On;
@@ -14,11 +15,17 @@ class Update extends Component
 {
     use Alert;
 
-    public ?Empresa $empresa;
+    public ?Empresa $empresa = null;
 
-    public ?Endereco $endereco;
+    public ?Endereco $endereco = null;
+
+    public ?User $user = null;
 
     public $bairro;
+
+    public ?string $password = null;
+
+    public ?string $password_confirmation = null;
 
     public bool $modal = false;
 
@@ -33,6 +40,7 @@ class Update extends Component
         $this->empresa = $empresa;
         $this->endereco = $this->empresa->endereco;
         $this->bairro = $this->endereco->bairro;
+        $this->user = $this->empresa->user;
 
         $this->modal = true;
     }
@@ -40,17 +48,23 @@ class Update extends Component
     public function rules(): array
     {
         return [
-            'empresa.nome' => [
+            'user.name' => [
                 'required',
                 'string',
                 'max:255'
             ],
-            'empresa.email' => [
+            'user.email' => [
                 'required',
                 'string',
                 'email',
                 'max:255',
-                'unique:empresas,email,' . $this->empresa->id,
+                'unique:users,email,' . $this->empresa->user->id,
+            ],
+            'password' => [
+                'nullable',
+                'string',
+                'min:8',
+                'confirmed'
             ],
             'empresa.cnpj' => [
                 'required',
@@ -92,6 +106,9 @@ class Update extends Component
     public function save(): void
     {
         $this->validate();
+
+        $this->user->password = when($this->password !== null, bcrypt($this->password), $this->user->password);
+        $this->user->save(); 
 
         $this->endereco->bairro = $this->bairro;
         $this->endereco->save();

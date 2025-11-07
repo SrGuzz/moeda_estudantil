@@ -97,7 +97,7 @@ class Transacao extends Component
         $transacao['professor'] = $this->transacao->professor->user->name;
         $transacao['aluno'] = $this->transacao->aluno->user->name;
         $transacao['moedas'] = $this->transacao->moedas;
-        $transacao['data'] = $this->transacao->created_at->diffForHumans();
+        $transacao['data'] = $this->transacao->created_at->format('d/m/Y H:i');
         $transacao['destinatario'] = $this->transacao->professor->user->name;
         $transacao['tipo'] = 'enviada';
 

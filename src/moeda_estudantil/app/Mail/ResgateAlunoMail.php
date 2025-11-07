@@ -9,14 +9,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class Transacao extends Mailable implements ShouldQueue
+class ResgateAlunoMail extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(public $transacao)
+    public function __construct(public $resgate)
     {
         //
     }
@@ -27,7 +27,7 @@ class Transacao extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Transacao Efetuada',
+            subject: 'Resgate de Vantagem ',
         );
     }
 
@@ -37,7 +37,7 @@ class Transacao extends Mailable implements ShouldQueue
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.transacao',
+            markdown: 'mail.resgate-aluno',
         );
     }
 

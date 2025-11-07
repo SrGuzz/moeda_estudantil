@@ -5,6 +5,7 @@ namespace App\Livewire\Empresas;
 use App\Livewire\Traits\Alert;
 use App\Models\Empresa;
 use App\Models\Endereco;
+use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Http;
 use Livewire\Component;
@@ -15,11 +16,17 @@ class Create extends Component
     use Alert;
     use Interactions;
 
+    public User $user;
+
     public Empresa $empresa;
 
     public Endereco $endereco;
 
     public $bairro;
+
+    public ?string $password = null;
+
+    public ?string $password_confirmation = null;
 
     public bool $modal = false;
 
@@ -27,6 +34,7 @@ class Create extends Component
     {
         $this->empresa = new Empresa();
         $this->endereco = new Endereco();
+        $this->user = new User();
     }
 
     public function render(): View
@@ -37,17 +45,23 @@ class Create extends Component
     public function rules(): array
     {
         return [
-            'empresa.nome' => [
+            'user.name' => [
                 'required',
                 'string',
                 'max:255'
             ],
-            'empresa.email' => [
+            'user.email' => [
                 'required',
                 'string',
                 'email',
                 'max:255',
-                'unique:empresas,email',
+                'unique:users,email',
+            ],
+            'password' => [
+                'nullable',
+                'string',
+                'min:8',
+                'confirmed'
             ],
             'empresa.cnpj' => [
                 'required',
@@ -90,9 +104,13 @@ class Create extends Component
     {
         $this->validate();
 
+        $this->user->password = $this->password;
+        $this->user->save();
+
         $this->endereco->bairro = $this->bairro;
         $this->endereco->save();
 
+        $this->empresa->user_id = $this->user->id;
         $this->empresa->endereco_id = $this->endereco->id;
         $this->empresa->save();
 

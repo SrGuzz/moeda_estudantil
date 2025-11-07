@@ -28,6 +28,7 @@ class Index extends Component
         ['index' => 'professor.user.name', 'label' => 'Professor'],
         ['index' => 'aluno.user.name', 'label' => 'Aluno'],
         ['index' => 'moedas', 'label' => 'Valor'],
+        ['index' => 'mensagem', 'label' => 'Descrição'],
         ['index' => 'created_at', 'label' => 'Data'],
     ];
 

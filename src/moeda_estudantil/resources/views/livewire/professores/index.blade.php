@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-2 mt-10 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-10 gap-10">
         @foreach($this->professores as $professor)
             <div class="hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
                 <x-card >
@@ -26,10 +26,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex justify-between bg-orange-100/80 py-5 rounded-md">
+                            <div class="flex justify-between bg-orange-100/80 py-5 rounded-md dark:bg-neutral-900">
                                 <div class="flex gap-4 ml-3">
                                     <x-icon name="currency-dollar" class="h-8 w-8 text-orange-500" outline/>
-                                    <p class="text-xl text-neutral-500 font-semibold">Saldo</p>
+                                    <p class="text-xl text-neutral-500 dark:text-white font-semibold">Saldo</p>
                                 </div>
                                 <div class="mr-3">
                                     <p class="bg-orange-500 px-5 py-1 rounded-3xl font-bold text-neutral-50">{{$professor->saldo_moedas}}</p>
@@ -54,7 +54,7 @@
                                 <div>
                                     <p class="text-neutral-500 ">Empresa</p>
                                     <div class="flex gap-x-1">
-                                        <p class="font-semibold">{{$professor->empresa->nome}}</p>
+                                        <p class="font-semibold">{{$professor->empresa->user->name}}</p>
                                     </div>
                                 </div>
                             </div> 

@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-2 mt-10 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-20">
             @foreach($this->empresas as $empresa)
                 <div class="hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
                     <x-card >
@@ -22,10 +22,10 @@
                                         <x-icon name="building-office-2" class="text-neutral-50 h-8 w-8"/>
                                     </div>
                                     <div>
-                                        <p class="text-xl font-bold">{{$empresa->nome}}</p>
+                                        <p class="text-xl font-bold">{{$empresa->user->name}}</p>
                                         <div class="text-neutral-500 flex gap-x-2">
                                             <x-icon name="envelope" class="h-5 w-5" outline/>
-                                            <p>{{$empresa->email}}</p>
+                                            <p>{{$empresa->user->email}}</p>
                                         </div>
                                     </div>
                                 </div>

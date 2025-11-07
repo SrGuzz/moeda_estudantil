@@ -17,11 +17,11 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            {{-- @if (Route::has('register'))
+            @if (Route::has('register'))
                 <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md" href="{{ route('register') }}">
                     {{ __('Sign up') }}
                 </a>
-            @endif --}}
+            @endif
 
             <x-button type="submit" class="ms-3">
                 {{ __('Log in') }}

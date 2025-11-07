@@ -32,6 +32,8 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    protected $table = 'users';
+
     protected function casts(): array
     {
         return [
@@ -48,5 +50,10 @@ class User extends Authenticatable
     public function professor()
     {
         return $this->hasOne(Professor::class);
+    }
+
+    public function empresa()
+    {
+        return $this->hasOne(Empresa::class);
     }
 }

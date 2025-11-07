@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('rg')->unique();
             $table->string('curso');
             $table->string('instituicao');
-            $table->integer('saldo_moedas', 12, 2)->default(0);
+            $table->integer('saldo_moedas')->default(0);
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('endereco_id')->unique()->nullable();
             $table->timestamps();

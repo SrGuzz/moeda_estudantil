@@ -128,7 +128,7 @@ class Update extends Component
 
         $this->dispatch('updated');
 
-        $this->resetExcept(['aluno', 'user']);
+        $this->reset();
 
         $this->success();
     }

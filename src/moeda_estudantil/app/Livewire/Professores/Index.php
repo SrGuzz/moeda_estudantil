@@ -41,7 +41,7 @@ class Index extends Component
                     $q->whereAny(['cpf', 'departamento', 'nome', 'saldo_moedas'], 'like', $term)
 
                     // colunas do relacionamento user()
-                    ->orWhereRelation('empresa', 'nome', 'like', $term)
+                    ->orWhereRelation('empresa.user', 'name', 'like', $term)
                     ->orWhereRelation('user', 'email', 'like', $term)
                     ->orWhereRelation('user', 'name', 'like', $term);
                 });

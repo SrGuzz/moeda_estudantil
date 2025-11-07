@@ -12,7 +12,7 @@
                 <x-input label="{{ __('Email') }} *" wire:model="user.email" required />
                 <x-input label="{{ __('CPF') }} *" wire:model="professor.cpf" required />
                 <x-input label="{{ __('Departamento') }} *" wire:model="professor.departamento" required />
-                <x-select.styled  :options="$empresas" wire:model="professor.empresa_id" select="label:nome|value:id" required  label="Empresa"/>
+                <x-select.styled  :options="$empresas" wire:model="professor.empresa_id"  required  label="Empresa"/>
             </div>
 
             <div>

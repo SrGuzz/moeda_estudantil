@@ -37,7 +37,11 @@ class Update extends Component
 
     public function mount()
     {
-        $this->empresas = Empresa::orderBy('nome')->get();
+        $this->empresas = Empresa::withAggregate('user', 'name')->orderBy('user_name')->get();
+        $this->empresas = $this->empresas->map(fn($e) => [
+            'label' => $e->user_name,         // texto a mostrar
+            'value' => $e->id,                // id da empresa
+        ])->all();
     }
 
     #[On('load::professor')]
@@ -45,7 +49,11 @@ class Update extends Component
     {
         $this->professor = $professor;
         $this->user = $this->professor->user;
-        $this->empresas = Empresa::orderBy('nome')->get();
+        $this->empresas = Empresa::withAggregate('user', 'name')->orderBy('user_name')->get();
+        $this->empresas = $this->empresas->map(fn($e) => [
+            'label' => $e->user_name,         // texto a mostrar
+            'value' => $e->id,                // id da empresa
+        ])->all();
 
         $this->modal = true;
     }
@@ -100,7 +108,7 @@ class Update extends Component
 
         $this->dispatch('updated');
 
-        $this->resetExcept(['professor', 'user']);
+        $this->resetExcept('empresas');
 
         $this->success();
     }

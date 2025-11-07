@@ -11,23 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('professores', function (Blueprint $table) {
+        Schema::create('vantagens', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('cpf')->unique();
-            $table->string('departamento');
-            $table->integer('saldo_moedas')->default(1000);
+            $table->string('nome')->unique();
+            $table->string('descricao');
             $table->unsignedBigInteger('empresa_id');
-            $table->unsignedBigInteger('user_id');
-            
+            $table->integer('valor');
+            $table->string('foto');
+
             $table->foreign('empresa_id')
                 ->references('id')
                 ->on('empresas')
-                ->cascadeOnDelete();
-            
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
                 ->cascadeOnDelete();
         });
     }
@@ -37,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('professores');
+        Schema::dropIfExists('vantagens');
     }
 };

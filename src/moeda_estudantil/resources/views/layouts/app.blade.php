@@ -33,14 +33,15 @@
                     <x-dropdown>
                         <x-slot:action>
                             <div>
-                                
                                 <button x-on:click="show = !show"><x-avatar class="cursor-pointer hover:bg-orange-500/80" text="{{Str::upper(substr(auth()->user()->name, 0, 2))}}" color="orange" /></button>
                             </div>
                         </x-slot:action>
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown.items :text="__('Profile')" :href="route('user.profile')" />
-                            <x-dropdown.items :text="__('Profile')" :href="route('user.profile')" />
+                            @if (auth()->user()->aluno)
+                            <x-dropdown.items :text="__('Resgates')" :href="route('user.resgates')" separator/>
+                            @endif
                             <x-dropdown.items :text="__('Logout')" onclick="event.preventDefault(); this.closest('form').submit();" separator />
                         </form>
                     </x-dropdown>
@@ -57,7 +58,10 @@
                 <x-side-bar.item text="Alunos" icon="users" :route="route('alunos.index')" />
                 <x-side-bar.item text="Empresas Parceiras" icon="building-office-2" :route="route('empresas.index')" />
                 <x-side-bar.item text="Professores" icon="academic-cap" :route="route('professores.index')" />
-                <x-side-bar.item text="Transacoes" icon="currency-dollar" :route="route('transacoes.index')" />
+                <x-side-bar.item text="Transacoes" icon="clock" :route="route('transacoes.index')" />
+                @if (auth()->user()->aluno || auth()->user()->empresa)
+                <x-side-bar.item text="Loja" icon="shopping-bag" :route="route('vantagens.index')" />
+                @endif
             </x-side-bar>
         </x-slot:menu>
         {{ $slot }}

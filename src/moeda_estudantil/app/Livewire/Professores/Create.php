@@ -33,7 +33,11 @@ class Create extends Component
     {
         $this->professor = new Professor();
         $this->user = new User();
-        $this->empresas = Empresa::orderBy('nome')->get();
+        $this->empresas = Empresa::withAggregate('user', 'name')->orderBy('user_name')->get();
+        $this->empresas = $this->empresas->map(fn($e) => [
+            'label' => $e->user_name,         // texto a mostrar
+            'value' => $e->id,                // id da empresa
+        ])->all();
     }
 
     public function render(): View

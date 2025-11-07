@@ -29,4 +29,9 @@ class Aluno extends Model
     {
         return $this->hasMany(Transacao::class);
     }
+
+    public function resgates()
+    {
+        return $this->hasMany(Resgate::class);
+    }
 }

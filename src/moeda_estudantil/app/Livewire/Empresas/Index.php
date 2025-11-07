@@ -18,12 +18,12 @@ class Index extends Component
     public ?string $search = null;
 
     public array $sort = [
-        'column'    => 'nome',
+        'column'    => 'user_name',
         'direction' => 'desc',
     ];
 
     public array $headers = [
-        ['index' => 'nome', 'label' => 'Nome'],
+        ['index' => 'user_name', 'label' => 'Nome'],
         ['index' => 'email', 'label' => 'Email'],
         ['index' => 'cnpj', 'label' => 'CNPJ'],
         ['index' => 'endereco_estado', 'label' => 'Estado'],
@@ -45,7 +45,7 @@ class Index extends Component
 
                 $q->where(function ($q) use ($term) {
                     // colunas locais da tabela alunos
-                    $q->whereAny(['nome', 'email', 'cnpj'], 'like', $term)
+                    $q->whereAny(['cnpj'], 'like', $term)
 
                     // colunas do relacionamento user()
                     ->orWhereRelation('endereco', 'cep', 'like', $term)
@@ -55,12 +55,16 @@ class Index extends Component
                     ->orWhereRelation('endereco', 'cidade', 'like', $term)
                     ->orWhereRelation('endereco', 'estado', 'like', $term)
                     ->orWhereRelation('endereco', 'estado', 'like', $term)
-                    ->orWhereRelation('endereco', 'complemento', 'like', $term);
+                    ->orWhereRelation('endereco', 'complemento', 'like', $term)
+                    ->orWhereRelation('user', 'email', 'like', $term)
+                    ->orWhereRelation('user', 'name', 'like', $term);
                 });
             })
             ->orderBy(...array_values($this->sort))
             ->withAggregate('endereco', 'estado')
             ->withAggregate('endereco', 'cidade')
+            ->withAggregate('user', 'name')
+            ->withAggregate('user', 'email')
             ->paginate($this->quantity)
             ->withQueryString();
     }

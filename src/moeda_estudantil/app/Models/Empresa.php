@@ -7,10 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Empresa extends Model
 {
     protected $fillable = [
-        'nome',
-        'email',
         'cnpj',
         'endereco_id',
+        'user_id',
     ];
 
     public function endereco()
@@ -20,6 +19,16 @@ class Empresa extends Model
 
     public function professor()
     {
-        return $this->hasMany(Empresa::class);
+        return $this->hasMany(Professor::class);
+    }
+
+    public function vantagens()
+    {
+        return $this->hasMany(Vantagem::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

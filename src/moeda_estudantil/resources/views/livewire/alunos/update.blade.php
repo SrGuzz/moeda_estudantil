@@ -28,7 +28,7 @@
             <hr class="text-neutral-200 mb-1.5">
 
             <div>
-                <h1 class="font-semibold text-black">Endereco</h1>
+                <h1 class="font-semibold text-black dark:text-neutral-50">Endereco</h1>
             </div>
 
             <div class="w-1/2 grid pr-2.5">

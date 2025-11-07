@@ -2,23 +2,36 @@
     <x-modal :title="'Dados da Empresa'" wire x-on:open="setTimeout(() => $refs.name.focus(), 250)">
         <form id="empresa-update" wire:submit="save" class="space-y-4">
             <div>
-                <x-input label="Nome *" wire:model="empresa.nome" required />
+                <x-input label="{{ __('Nome') }} *" x-ref="name" wire:model="user.name" required />
             </div>
 
             <div class="grid grid-cols-2 gap-5">
-                <x-input label="Email *" wire:model="empresa.email" required />
+                <x-input label="Email *" wire:model="user.email" required />
                 
                 <x-input label="CNPJ *" wire:model="empresa.cnpj" required x-mask="99999999999999"/>
+            </div>
+
+            <div>
+                <x-password label="{{ __('Senha') }}"
+                            wire:model="password"
+                            rules
+                            generator
+                            x-on:generate="$wire.set('password_confirmation', $event.detail.password)"
+                             />
+            </div>
+
+            <div>
+                <x-password :label="__('Confirmar Senha')" wire:model="password_confirmation" rules  />
             </div>
 
             <hr class="text-neutral-200 mb-1.5">
 
             <div>
-                <h1 class="font-semibold text-black">Endereco</h1>
+                <h1 class="font-semibold text-black dark:text-white">Endereco</h1>
             </div>
 
             <div class="w-1/2 grid pr-2.5">
-                <x-input label="CEP" hint="Ex: 12345678" x-mask="99999-999" wire:model.live="endereco.cep" clearable/>
+                <x-input label="CEP" hint="Ex: 12345-678" x-mask="99999-999" wire:model.live="endereco.cep" clearable/>
             </div>
 
             <div class="grid grid-cols-2 gap-5">
@@ -34,8 +47,6 @@
                 
                 <x-input label="Complemento" wire:model="endereco.complemento" />
             </div>
-
-
         </form>
         <x-slot:footer>
             <x-button type="submit" form="empresa-update" loading="save">
