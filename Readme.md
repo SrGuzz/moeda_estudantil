@@ -71,22 +71,13 @@
 ---
 
 ## 📝 Sobre o Projeto
-Nesta seção, descreva de forma clara e objetiva **o propósito do seu projeto**, explicando:
 
-- **Por que ele existe** — qual motivação levou à sua criação.  
-- **Qual problema ele resolve** — que dor, necessidade ou oportunidade ele atende.  
-- **Qual o contexto** — acadêmico, profissional, pessoal, experimental, etc.  
-- **Onde ele pode ser utilizado** — cenários reais ou simulados.  
 
-Procure responder perguntas como:
-- *Qual foi a ideia inicial do projeto?*
-- *O que ele entrega de valor ao usuário?*
-- *Por que alguém utilizaria ou contribuiria com esse projeto?*
-- *O que o torna relevante ou interessante?*
+- **Por que ele existe** — Esse sistema foi desenvolvido para a materia Laboratorio de Desenvolvimento de Software, do curso de Engenharia de Software da PUC-Minas.
+- **Qual problema ele resolve** — Ele resolve um problema hipotético, no qual uma escola quer um sistema de moeda estudantil em que empresas possam participar e os alunos consigam resgatar. brindes e vantagens pelo sistema.
+- **Qual o contexto** — acadêmico.  
+- **Onde ele pode ser utilizado** — Ele pode ser usado em escolas ou faculdades.  
 
-Escreva de forma objetiva, mas completa, para que qualquer pessoa entenda rapidamente **o que é** e **por que importa**.
-
-> **Nota:** Esta seção segue boas práticas de documentação profissional e deve ser ajustada conforme o tipo e o objetivo do seu projeto.
 
 ---
 
