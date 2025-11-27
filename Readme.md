@@ -1,6 +1,6 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/ArtMix532/moeda_estudantil)
-![GitHub language count](https://img.shields.io/github/languages/count/ArtMix532/moeda_estudantil)
-![GitHub forks](https://img.shields.io/github/forks/ArtMix532/moeda_estudantil)
+![GitHub repo size](https://img.shields.io/github/repo-size/SrGuzz/moeda_estudantil)
+![GitHub language count](https://img.shields.io/github/languages/count/SrGuzz/moeda_estudantil)
+![GitHub forks](https://img.shields.io/github/forks/SrGuzz/moeda_estudantil)
 
 # Sistema de Moeda Estudantil
 
@@ -34,7 +34,57 @@
 
 A plataforma oferece funcionalidades distintas para cada tipo de usuário:
 
-### **Para Estudantes:**
+### **Para Clientes:**
 
-- **Dashboard Pessoal**: Visualização de saldo, transações e recompensas disponíveis.
-- **Resgate de Recompensas**: Possibilidade de trocar moedas por benefícios ou prêmios
+- **Dashboard Pessoal**: Visualização rápida de estatísticas como pedidos ativos, contratos vigentes e histórico total.
+- **Criação de Pedidos**: Um fluxo guiado de 4 passos para solicitar um novo aluguel de veículo.
+- **Histórico de Pedidos**: Uma tela dedicada para listar, visualizar e filtrar todos os pedidos de aluguel já realizados.
+- **Cancelamento de Pedidos**: Possibilidade de cancelar um pedido que ainda esteja com o status "RESERVADA".
+- **Cadastro e Autenticação**: Sistema seguro de criação de conta e login.
+
+### **Para Agentes:**
+
+- **Dashboard Administrativo**: Visão geral de todas as locações, com foco em pedidos pendentes de análise.
+- **Gerenciamento de Locações**: Tela para visualizar **todas** as locações de **todos** os clientes.
+- **Aprovação e Rejeição**: Ferramentas para alterar o status de um pedido de "RESERVADA" para "ATIVA" (aprovado) ou "CANCELADA" (rejeitado).
+- **Filtros Avançados**: Capacidade de filtrar locações por status, cliente ou veículo.
+
+## 📂 Estrutura e Fluxo do Projeto
+
+1.  **Autenticação** → Usuário se cadastra ou faz login, recebendo um token JWT.
+2.  **Dashboard** → O usuário é direcionado para um dashboard personalizado de acordo com seu nível de acesso (Cliente ou Agente).
+3.  **Criação de Pedido (Cliente)** → O cliente passa por um formulário de múltiplos passos para escolher o veículo, período e fornecer dados pessoais/profissionais.
+4.  **Listagem de Pedidos (Cliente)** → O cliente pode ver o status de todos os seus pedidos.
+5.  **Gerenciamento (Agente)** → O agente visualiza todos os pedidos, podendo filtrá-los e tomar ações como aprovar ou rejeitar.
+
+## 🌐 Deploy
+
+O projeto pode ser acessado online através do seguinte link:
+
+[Acessar a Aplicação](https://SEU-LINK-AQUI.com/)
+
+## 📸 Preview
+
+<img src="artefatos/GifProjetoLocadora.gif" alt="Preview do projeto AutoLux Rental">
+
+## 👥 Desenvolvedor
+
+- Davi Benjamim Guimarães
+- Albert Luis Pereira de Jesus
+- Jonas Rafael Martins
+
+## 📬 Contato
+
+Caso queira entrar em contato:
+
+- ✉️ Email: `davibenjamimguimaraes@gmail.com`
+- 🔗 LinkedIn: [Davi Benjamim Guimarães](https://www.linkedin.com/in/davi-benjamim-guimar%C3%A3es-b82741288/)
+- 🐙 GitHub: [ArtMix532](https://github.com/ArtMix532)
+
+- ✉️ Email: `albertluis123y88@gmail.com`
+- 🔗 LinkedIn: [Albert Luis Pereira de Jesus](https://www.linkedin.com/in/albert-luis/)
+- 🐙 GitHub: [SrGuzz](https://github.com/SrGuzz)
+
+- ✉️ Email: `jonasrmartins17@gmail.com`
+- 🔗 LinkedIn: [Jonas Rafael Martins](https://www.linkedin.com/in/SEU-LINKEDIN-AQUI/)
+- 🐙 GitHub: [Kjonps](https://github.com/Kjonps)
