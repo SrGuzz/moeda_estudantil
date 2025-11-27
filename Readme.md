@@ -2,7 +2,7 @@
 
 ---
 
-# 🏷️ Sistema de mode Estudantil ✨
+# 🏷️ Sistema de Moeda Estudantil ✨
 
 - Breve descrição do projeto. **Foque no principal valor/benefício.**  
 - Crie uma **logo** para o projeto que represente a aplicação em questão.
