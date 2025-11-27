@@ -4,7 +4,7 @@
 
 # 🏷️ Sistema de Moeda Estudantil ✨
 
-- Breve descrição do projeto. **Foque no principal valor/benefício.**  
+- Breve descrição do projeto. **Foque no principal valor/benefício.**
 - Crie uma **logo** para o projeto que represente a aplicação em questão.
 
 <table>
@@ -22,10 +22,10 @@
   </tr> 
 </table>
 
-
 ---
 
 ## 📚 Índice
+
 - [Links Úteis](#-links-úteis)
 - [Sobre o Projeto](#-sobre-o-projeto)
 - [Funcionalidades Principais](#-funcionalidades-principais)
@@ -35,9 +35,9 @@
 - [Instalação e Execução](#-instalação-e-execução)
   - [Pré-requisitos](#pré-requisitos)
   - [Variáveis de Ambiente](#-variáveis-de-ambiente)
-     - [1 Back-end (Spring Boot)](#1-back-end-spring-boot)
-     - [2 Front-end (React, Vite)](#2-front-end-react-vite)
-     - [3 Exemplos de Variáveis de Ambiente na Vercel](#3-exemplos-de-variáveis-de-ambiente-na-vercel)
+    - [1 Back-end (Spring Boot)](#1-back-end-spring-boot)
+    - [2 Front-end (React, Vite)](#2-front-end-react-vite)
+    - [3 Exemplos de Variáveis de Ambiente na Vercel](#3-exemplos-de-variáveis-de-ambiente-na-vercel)
   - [Instalação de Dependências](#-instalação-de-dependências)
     - [Front-end (React)](#front-end-react)
     - [Back-end (Spring Boot)](#back-end-spring-boot)
@@ -63,52 +63,51 @@
 ---
 
 ## 🔗 Links Úteis
-* 🌐 **Demo Online:** [Acesse a Aplicação Web](<link-da-demo-web>)
+
+- 🌐 **Demo Online:** [Acesse a Aplicação Web](link-da-demo-web)
   > 💻 **Descrição:** Link para a aplicação em ambiente de produção (Ex: hospedado na Vercel, Netlify ou AWS S3).
-* 📖 **Documentação:** [Leia a Wiki/Docs](<docs>)
+- 📖 **Documentação:** [Leia a Wiki/Docs](docs)
   > 📚 **Descrição:** Acesso à documentação técnica completa do projeto (Ex: Swagger/OpenAPI para API, ou Wiki interna).
 
 ---
 
 ## 📝 Sobre o Projeto
 
-
 - **Por que ele existe** — Esse sistema foi desenvolvido para a materia Laboratorio de Desenvolvimento de Software, do curso de Engenharia de Software da PUC-Minas.
 - **Qual problema ele resolve** — Ele resolve um problema hipotético, no qual uma escola quer um sistema de moeda estudantil em que empresas possam participar e os alunos consigam resgatar. brindes e vantagens pelo sistema.
-- **Qual o contexto** — acadêmico.  
-- **Onde ele pode ser utilizado** — Ele pode ser usado em escolas ou faculdades.  
-
+- **Qual o contexto** — acadêmico.
+- **Onde ele pode ser utilizado** — Ele pode ser usado em escolas ou faculdades.
 
 ---
 
 ## ✨ Funcionalidades Principais
+
 Liste as funcionalidades de forma clara e objetiva.
 
-* 🔐 **Autenticação Segura:** Login, Cadastro e Recuperação de Senha.
-* 📈 **Painel de Controle:** Visualização de dados em tempo real com gráficos.
-* ⚙️ **Gerenciamento de CRUD:** Criação, Leitura, Atualização e Deleção de recursos (e.g., Usuários, Itens).
+- 🔐 **Autenticação Segura:** Login, Cadastro e Recuperação de Senha.
+- 📈 **Painel de Controle:** Visualização de dados em tempo real com gráficos.
+- ⚙️ **Gerenciamento de CRUD:** Criação, Leitura, Atualização e Deleção de recursos (e.g., Usuários, Itens).
 
 ---
 
 ## 🛠 Tecnologias Utilizadas
 
-*TallStackUI.
+\*TallStackUI.
 
 ### 💻 Front-end
 
-* **Framework/Biblioteca:** Livewire
-* **Linguagem/Superset:** PHP
-* **Estilização:** Tailwind CSS
-* **Build Tool:** Vite
+- **Framework/Biblioteca:** Livewire
+- **Linguagem/Superset:** PHP
+- **Estilização:** Tailwind CSS
+- **Build Tool:** Vite
 
 ### 🖥️ Back-end
 
-* **Linguagem/Runtime:** PHP
-* **Framework:** Laravel
-* **Banco de Dados:** MySQL
-* **ORM / Query Builder:** Composer
-* **Autenticação:** Laravel Jetstream
-
+- **Linguagem/Runtime:** PHP
+- **Framework:** Laravel
+- **Banco de Dados:** MySQL
+- **ORM / Query Builder:** Composer
+- **Autenticação:** Laravel Jetstream
 
 ---
 
@@ -130,280 +129,23 @@ Você pode incluir:
 
 Para melhor visualização e entendimento da estrutura do sistema, os diagramas principais estão organizados lado a lado.
 
-| Diagrama de Arquitetura | Detalhe da Arquitetura |
-| :---: | :---: |
-| **Visão Geral (Macro)** | **Camada de Serviço (Micro)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes ou Serviço X" width="120px" height="120px"> |
-| **Modelo de Dados (Entidades)** | **Fluxo de Autenticação** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Entidade-Relacionamento (DER)" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência de Login" width="120px" height="120px"> |
-| **Infraestrutura (Cloud)** | **API Gateway (Rotas)** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Deploy na AWS/Vercel" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Mapa de Endpoints da API" width="120px" height="120px"> |
-
----
-
-### 🔑 Variáveis de Ambiente
-
-Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
-
-#### 1 Back-end (Spring Boot)
-
-Configure estas variáveis como **variáveis de ambiente do sistema** ou em um arquivo de configuração do Spring (ex: `application.properties`/`application.yml`).
-
-| Variável | Descrição | Exemplo |
-| :--- | :--- | :--- |
-| `SERVER_PORT` | Porta onde o Back-end será executado. | `8080` |
-| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/meubanco` |
-| `SPRING_DATASOURCE_USERNAME` | Usuário do banco de dados. | `postgres` |
-| `SPRING_DATASOURCE_PASSWORD` | Senha do banco de dados. | `senha-segura-123` |
-| `JWT_SECRET` | Chave secreta para assinatura de tokens (Opcional). | `chave_super_segura_base64` |
-
-#### 2 Front-end (React, Vite)
-
-Crie um arquivo **`.env`** na raiz da pasta `/frontend` e use o prefixo `VITE_` (ou `REACT_APP_` se estiver usando CRA) para expor as variáveis ao *bundle* da aplicação.
-
-| Variável | Descrição | Exemplo |
-| :--- | :--- | :--- |
-| `VITE_API_URL` | URL base do endpoint do Backend Spring Boot. | `http://localhost:8080/api` |
-| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui` |
-| `VITE_GOOGLE_MAPS_KEY` | Chave de API para serviços de mapas (Opcional). | `AIzaSy...` |
-
----
-
-#### 3. Exemplos de Variáveis de Ambiente na Vercel
-
-A Vercel permite configurar variáveis no painel (Project Settings > Environment Variables).
-Aqui estão exemplos comuns utilizadas em aplicações front-end e full-stack:
-
----
-
-##### **Exemplo 1 – Front-end com Next.js usando API externa**
-
-```
-NEXT_PUBLIC_API_URL=https://meu-backend.vercel.app/api
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID=G-seu_google_analytics_id_aqui
-```
-
----
-
-##### **Exemplo 2 – Aplicação Full-stack (Next.js + Prisma + PostgreSQL)**
-
-```
-DATABASE_URL=postgresql://admin:senha-super-segura@ep-meu-banco.aws.neon.tech:5432/verceldb
-NEXTAUTH_SECRET=uma_chave_muito_longa_e_segura
-NEXTAUTH_URL=https://meu-sistema.vercel.app
-```
-
----
-
-##### **Exemplo 3 – Integração com APIs externas**
-
-```
-STRIPE_SECRET_KEY=sk_live_seu_stripe_key_aqui
-OPENAI_API_KEY=sk-sua_openai_key_aqui
-SENDGRID_API_KEY=SG.sua_sendgrid_key_aqui
-```
-
----
-
-##### **Exemplo 4 – Frontend com Vite (EmailJS)**
-
-```
-VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
-VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
-```
-
-> **Obs:** As variáveis de ambiente em projetos **Vite** precisam começar com `VITE_` para que o Vite as reconheça e as inclua no *bundle* do frontend; variáveis sem esse prefixo não ficam disponíveis no código do cliente.
-
----
-
-Para adicionar essas variáveis:
-
-1.  Acesse a página de Environment Variables do seu projeto no Vercel (ex.: `https://vercel.com/<seu-usuario>/<seu-projeto>/settings/environment-variables`)
-2.  Clique em **"Add"** para adicionar cada variável com o nome e valor correspondente.
-
-Alternativamente, se estiver desenvolvendo localmente, crie um arquivo **`.env.local`** dentro da pasta **`frontend`** do seu projeto com o seguinte conteúdo:
-
-```
-# Variável essencial para conectar ao Back-end Spring Boot rodando localmente (normalmente na porta 8080)
-VITE_API_URL=http://localhost:8080/api
-
-# Variáveis para integrações externas de serviço de e-mail
-VITE_EMAILJS_SERVICE_ID=seu_service_id_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_ME=seu_template_id_for_me_aqui
-VITE_EMAILJS_TEMPLATE_ID_FOR_SENDER=seu_template_id_for_sender_aqui
-VITE_EMAILJS_PUBLIC_KEY=sua_public_key_aqui
-
-# Outras chaves de serviço
-VITE_GOOGLE_MAPS_KEY=AIzaSy...
-```
-
-> 💡 **Localização:** Garanta que este arquivo esteja em **`/frontend/.env.local`** para que o **Vite** consiga carregá-lo e disponibilizar as variáveis para o Front-end durante o desenvolvimento.
-
-### 📦 Instalação de Dependências
-
-Clone o repositório e instale as dependências.
-
-1.  **Clone o Repositório:**
-
-```bash
-git clone <URL_DO_SEU_REPOSITÓRIO>
-cd <pasta-do-projeto>
-```
-
-2.  **Instale as Dependências (Monorepo):**
-
-Como o projeto está dividido, você precisa instalar as dependências separadamente para o Front-end (React, usando NPM/Yarn) e garantir que o Back-end (Spring Boot, usando Maven/Gradle Wrapper) tenha suas dependências resolvidas.
-
-#### Front-end (React)
-
-Acesse a pasta do Front-end e instale as dependências do Node.js:
-
-```bash
-cd frontend
-npm install
-# ou
-yarn install
-cd .. # Retorna para a raiz
-```
-
-#### Back-end (Spring Boot)
-
-O Spring Boot utiliza o **Maven Wrapper** (`./mvnw`) ou **Gradle Wrapper** (`./gradlew`) para gerenciar dependências. Execute o comando de instalação/build limpo antes de rodar.
-
-* **Usando Maven (`pom.xml`):**
-    ```bash
-    cd backend
-    ./mvnw clean install
-    cd ..
-    ```
-* **Usando Gradle (`build.gradle`):**
-    ```bash
-    cd backend
-    ./gradlew clean build
-    cd ..
-    ```
-
----
-
-### 💾 Inicialização do Banco de Dados (PostgreSQL)
-
-O projeto utiliza **PostgreSQL**. A forma mais fácil de inicializar o banco é via Docker (para execução sem `docker-compose`):
-
-1. **Rode o Container do PostgreSQL:**  
-   (Certifique-se que o Docker está em execução)
-
-```bash
-docker run --name minha_db -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=senha-segura-123 -e POSTGRES_DB=nome_do_banco -p 5432:5432 -d postgres:16
-```
-
-2. **Execute as Migrações:**  
-   O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados automaticamente no startup (via Hibernate `ddl-auto`) ou utilizando ferramentas como **Flyway** ou **Liquibase**.
-
-* **Se o Spring Boot gerencia o schema (padrão):** Nenhuma ação manual é necessária, basta rodar o Back-end (veja a próxima seção).
-* **Se usar Flyway/Liquibase via Maven:**
-    ```bash
-    cd backend
-    ./mvnw flyway:migrate
-    # ou
-    ./mvnw liquibase:update
-    ```
----
-
-### Como Executar a Aplicação
-Execute a aplicação em modo de desenvolvimento em **dois terminais separados**.
-
-#### Terminal 1: Back-end (Spring Boot)
-
-Inicie a API do Spring Boot. Ela tentará se conectar ao banco de dados rodando no Docker.
-
-```bash
-cd backend
-./mvnw spring-boot:run
-```
-🚀 *O Back-end estará disponível em **http://localhost:8080**.*
-
----
-
-#### Terminal 2: Front-end (React, Vite)
-
-Inicie o servidor de desenvolvimento do Front-end.
-
-```bash
-cd frontend
-npm run dev
-# ou
-yarn dev
-```
-🎨 *O Front-end estará disponível em **http://localhost:5173** (ou a porta configurada no Vite/CRA).*
-
----
-
-#### 🐳 Execução Local Completa com Docker Compose (Incluindo Banco de Dados)
-
-Para uma execução local que inclui o serviço de Back-end (**Spring Boot**), Front-end (**React**) e o banco de dados **PostgreSQL**, usaremos o **`docker-compose`** para orquestração.
-
-Antes de tudo, certifique-se de que o **Docker Desktop** (no Mac/Windows) ou o **serviço Docker** (em Linux) está em execução.
-
-- **No Mac/Windows**: basta abrir o aplicativo **Docker Desktop**.
-- **No Linux**: rode o comando abaixo para iniciar o serviço:
-
-```bash
-sudo systemctl start docker
-```
-
----
-
-#### 📦 Passos para build, inicialização e execução
-
-1. Acesse a pasta raiz do projeto (onde o arquivo `docker-compose.yml` está localizado):
-
-```bash
-cd /caminho/do/projeto/nome-do-projeto
-```
-
-2. Suba todos os serviços (Back-end, Front-end e Banco de Dados) definidos no `docker-compose.yml`:
-
-```bash
-docker-compose up --build -d
-```
-
-> 💡 **Nota:** O parâmetro `--build` garante que as imagens mais recentes do projeto sejam geradas, e `-d` executa em segundo plano.
-
-3. Verifique se os containers estão rodando:
-
-```bash
-docker ps
-```
-
-4. **Execute as Migrações do Banco de Dados:**
-   O Back-end **Spring Boot** geralmente gerencia o schema do banco de dados (via Flyway/Liquibase ou Hibernate) na **inicialização do serviço**.
-
-* **Verificação:** Se o serviço de Back-end (`backend` ou `api`) for o responsável pelas migrações, verifique os logs para confirmar se o processo foi concluído.
-    ```bash
-    docker logs <nome_do_container_backend>
-    ```
-* *Atenção:* O comando `npm run db:migrate` é exclusivo para Node.js e **não** deve ser usado.
-
-5. Abra no navegador:
-   O Front-end deve estar acessível na porta configurada no `docker-compose` (Exemplo: <http://localhost:3000> ou <http://localhost:5173>)
-
-6. Para parar e remover todos os containers, redes e volumes (exceto volumes nomeados):
-
-```bash
-docker-compose down
-```
-
-✅ **Em resumo:** Usar **`docker-compose`** simplifica a execução do ambiente completo, isolando as dependências de **Java (Spring Boot)** e **Node.js (React)** e garantindo que o PostgreSQL esteja disponível.
+|                                                              Diagrama de Arquitetura                                                              |                                                            Detalhe da Arquitetura                                                            |
+| :-----------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                              **Visão Geral (Macro)**                                                              |                                                        **Camada de Serviço (Micro)**                                                         |
+|    <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Visão Geral do Sistema" width="120px" height="120px">     | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Componentes ou Serviço X" width="120px" height="120px"> |
+|                                                          **Modelo de Dados (Entidades)**                                                          |                                                          **Fluxo de Autenticação**                                                           |
+| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Entidade-Relacionamento (DER)" width="120px" height="120px"> |    <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Sequência de Login" width="120px" height="120px">    |
+|                                                            **Infraestrutura (Cloud)**                                                             |                                                           **API Gateway (Rotas)**                                                            |
+|     <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Diagrama de Deploy na AWS/Vercel" width="120px" height="120px">      |       <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Mapa de Endpoints da API" width="120px" height="120px">       |
 
 ---
 
 ## 🚀 Deploy
+
 Instruções claras para deploy em produção.
 
 1.  **Build do Projeto:**
-    Execute o build separadamente para os dois artefatos (JAR para o Back-end e arquivos estáticos para o Front-end).
+Execute o build separadamente para os dois artefatos (JAR para o Back-end e arquivos estáticos para o Front-end).
 
 ```bash
 # 1. Build do Front-end (React/Vite) - Gera a pasta /dist com arquivos estáticos
@@ -420,7 +162,7 @@ cd ../backend
 > 🔑 **Variáveis Cruciais:** Certifique-se de configurar as variáveis de **conexão com o banco de dados** (`SPRING_DATASOURCE_URL`, etc.) para o Back-end e a **URL da API de produção** (`VITE_API_URL`) para o Front-end.
 
 3.  **Execução em Produção:**
-    A forma de execução depende do seu provedor, mas geralmente envolve o seguinte:
+A forma de execução depende do seu provedor, mas geralmente envolve o seguinte:
 
 ```bash
 # ☕ Execução do Back-end Spring Boot (Java JAR)
@@ -520,36 +262,36 @@ Descreva o propósito das pastas principais.
 
 ## 🎥 Demonstração
 
-Use GIFs e prints para mostrar o projeto em ação.  
+Use GIFs e prints para mostrar o projeto em ação.
 
 Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem.
 
 ### 📱 Aplicativo Mobile
 
-- GIF de demonstração (exemplo de fluxo de usuário):  
+- GIF de demonstração (exemplo de fluxo de usuário):
   - Sua gif aqui <img src="./caminho/gif-mobile.gif" alt="Demonstração do App Mobile" height="350">
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Tela Inicial (Home)** | **Tela de Perfil / Settings** |
+|                                                           Tela                                                           |                                                     Captura de Tela                                                      |
+| :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+|                                                 **Tela Inicial (Home)**                                                  |                                              **Tela de Perfil / Settings**                                               |
 | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 1 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 2 do Mobile" width="120px" height="120px"> |
-| **Tela de Cadastro** | **Tela de Lista / Detalhes** |
+|                                                   **Tela de Cadastro**                                                   |                                               **Tela de Lista / Detalhes**                                               |
 | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 3 do Mobile" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela 4 do Mobile" width="120px" height="120px"> |
 
 ### 🌐 Aplicação Web
 
 Para melhor visualização, as telas principais estão organizadas lado a lado.
 
-| Tela | Captura de Tela |
-| :---: | :---: |
-| **Página Inicial (Home)** | **Página de Login** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px"> |
-| **Cadastro de Clientes** | **Cadastro de Produtos** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
-| **Dashboard (Visão Geral)** | **Página Admin / Configurações** |
-| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px"> | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px"> |
+|                                                                 Tela                                                                  |                                                           Captura de Tela                                                            |
+| :-----------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
+|                                                       **Página Inicial (Home)**                                                       |                                                         **Página de Login**                                                          |
+| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> |        <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px">         |
+|                                                       **Cadastro de Clientes**                                                        |                                                       **Cadastro de Produtos**                                                       |
+| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px">  | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
+|                                                      **Dashboard (Visão Geral)**                                                      |                                                   **Página Admin / Configurações**                                                   |
+|       <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px">       |     <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px">      |
 
 ### 💻 Exemplo de Saída no Terminal (para Back-end, API, CLI)
 
@@ -566,6 +308,7 @@ curl -X GET 'http://localhost:3000/api/v1/users' \
 ```
 
 **Saída Esperada:**
+
 ```json
 {
   "total": 2,
@@ -598,6 +341,7 @@ npm run cli validate:schema --target=production
 ```
 
 **Saída Esperada:**
+
 ```text
 [INFO] Iniciando validação do banco de dados...
 [SUCCESS] 15/15 tabelas verificadas.
@@ -611,20 +355,24 @@ Tempo de execução: 1.25s
 ## 🧪 Testes
 
 ### Testes Unitários e de Integração
+
 Para rodar os testes da unidade e integração:
 
 ```
 npm run test
 ```
-*Ferramenta utilizada: Jest, Vitest, Mocha, etc.*
+
+_Ferramenta utilizada: Jest, Vitest, Mocha, etc._
 
 ### Testes End-to-End (E2E)
+
 Para rodar os testes de ponta a ponta (E2E):
 
 ```
 npm run test:e2e
 ```
-*Ferramenta utilizada: Cypress, Playwright, Selenium, etc.*
+
+_Ferramenta utilizada: Cypress, Playwright, Selenium, etc._
 
 ---
 
@@ -632,31 +380,33 @@ npm run test:e2e
 
 Liste aqui links para documentação técnica, referências de bibliotecas complexas ou guias de estilo que foram cruciais para o projeto.
 
-* 📖 **Framework/Biblioteca (Front-end):** [Documentação Oficial do **React**](https://react.dev/reference/react)
-* 📖 **Build Tool (Front-end):** [Guia de Configuração do **Vite**](https://vitejs.dev/config/)
-* 📖 **Framework (Back-end):** [Documentação Oficial do **Spring Boot**](https://docs.spring.io/spring-boot/docs/current/reference/html/)
-* 📖 **Containerização:** [Documentação de Referência do **Docker**](https://docs.docker.com/)
-* 📖 **Guia de Estilo:** [**Conventional Commits** (Padrão de Mensagens)](https://www.conventionalcommits.org/en/v1.0.0/)
-* 📖 **Documentação Interna:** [Design System do Projeto](./docs/design-system.md)
+- 📖 **Framework/Biblioteca (Front-end):** [Documentação Oficial do **React**](https://react.dev/reference/react)
+- 📖 **Build Tool (Front-end):** [Guia de Configuração do **Vite**](https://vitejs.dev/config/)
+- 📖 **Framework (Back-end):** [Documentação Oficial do **Spring Boot**](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+- 📖 **Containerização:** [Documentação de Referência do **Docker**](https://docs.docker.com/)
+- 📖 **Guia de Estilo:** [**Conventional Commits** (Padrão de Mensagens)](https://www.conventionalcommits.org/en/v1.0.0/)
+- 📖 **Documentação Interna:** [Design System do Projeto](./docs/design-system.md)
 
 ---
 
 ## 👥 Autores
+
 Liste os principais contribuidores. Você pode usar links para seus perfis.
 
-| 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn |
-|---------|----------|-----------------|-------------|
+| 👤 Nome | 🖼️ Foto                                                                                                                   | :octocat: GitHub                                                                                                                                                    | 💼 LinkedIn                                                                                                                                                         |
+| ------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Nome 1  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/github-user1"><img src="https://joaopauloaramuni.github.io/image/github2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="<Link do LinkedIn do Autor 1>"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> |
 | Nome 2  | <div align="center"><img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/github-user2"><img src="https://joaopauloaramuni.github.io/image/github2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="<Link do LinkedIn do Autor 2>"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> |
 
 ---
 
 ## 🤝 Contribuição
+
 Guia para contribuições ao projeto.
 
 1.  Faça um `fork` do projeto.
 2.  Crie uma branch para sua feature (`git checkout -b feature/minha-feature`).
-3. Commit suas mudanças (`git commit -m 'feat: Adiciona nova funcionalidade X'`). **(Utilize [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/))**
+3.  Commit suas mudanças (`git commit -m 'feat: Adiciona nova funcionalidade X'`). **(Utilize [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/))**
 4.  Faça o `push` para a branch (`git push origin feature/minha-feature`).
 5.  Abra um **Pull Request (PR)**.
 
@@ -665,15 +415,16 @@ Guia para contribuições ao projeto.
 ---
 
 ## 🙏 Agradecimentos
+
 Em ambiente acadêmico, citar fontes e inspirações é crucial (integridade acadêmica). Em ambiente profissional, mostra humildade e conexão com a comunidade.
 
 Gostaria de agradecer aos seguintes canais e pessoas que foram fundamentais para o desenvolvimento deste projeto:
 
-* [**Engenharia de Software PUC Minas**](https://www.instagram.com/engsoftwarepucminas/) - Pelo apoio institucional, estrutura acadêmica e fomento à inovação e boas práticas de engenharia.
-* [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni) - Pelos valiosos ensinamentos sobre **Arquitetura de Software** e **Padrões de Projeto**.
-* [**Fernanda Kipper**](https://www.instagram.com/kipper.dev/) - Pelos valiosos ensinamentos em **Desenvolvimento Web**, **DevOps** e melhores práticas em **Front-end**.
-* [**Rodrigo Branas**](https://branas.io/) - Pela didática excepcional em **Clean Architecture** e **Clean Code**.
-* [**Código Fonte TV**](https://codigofonte.tv/) - Pelo vasto conteúdo e cobertura de notícias, tutoriais e apoio à comunidade de **Desenvolvimento Web**.
+- [**Engenharia de Software PUC Minas**](https://www.instagram.com/engsoftwarepucminas/) - Pelo apoio institucional, estrutura acadêmica e fomento à inovação e boas práticas de engenharia.
+- [**Prof. Dr. João Paulo Aramuni**](https://github.com/joaopauloaramuni) - Pelos valiosos ensinamentos sobre **Arquitetura de Software** e **Padrões de Projeto**.
+- [**Fernanda Kipper**](https://www.instagram.com/kipper.dev/) - Pelos valiosos ensinamentos em **Desenvolvimento Web**, **DevOps** e melhores práticas em **Front-end**.
+- [**Rodrigo Branas**](https://branas.io/) - Pela didática excepcional em **Clean Architecture** e **Clean Code**.
+- [**Código Fonte TV**](https://codigofonte.tv/) - Pelo vasto conteúdo e cobertura de notícias, tutoriais e apoio à comunidade de **Desenvolvimento Web**.
 
 ---
 
@@ -682,7 +433,3 @@ Gostaria de agradecer aos seguintes canais e pessoas que foram fundamentais para
 Este projeto é distribuído sob a **[Licença MIT](https://github.com/joaopauloaramuni/laboratorio-de-desenvolvimento-de-software/blob/main/LICENSE)**.
 
 ---
-
-
-
-
