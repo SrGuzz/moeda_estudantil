@@ -111,6 +111,44 @@ Você pode incluir:
 - **Trade-offs** ou limitações relevantes
 
 
+---
+
+### 🔑 Variáveis de Ambiente
+
+Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
+
+#### 1 Back-end (Spring Boot)
+
+Configure estas variáveis como **variáveis de ambiente do sistema** ou em um arquivo de configuração do Spring (ex: `application.properties`/`application.yml`).
+
+| Variável | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `SERVER_PORT` | Porta onde o Back-end será executado. | `8080` |
+| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/meubanco` |
+| `SPRING_DATASOURCE_USERNAME` | Usuário do banco de dados. | `postgres` |
+| `SPRING_DATASOURCE_PASSWORD` | Senha do banco de dados. | `senha-segura-123` |
+| `JWT_SECRET` | Chave secreta para assinatura de tokens (Opcional). | `chave_super_segura_base64` |
+
+#### 2 Front-end (React, Vite)
+
+Crie um arquivo **`.env`** na raiz da pasta `/frontend` e use o prefixo `VITE_` (ou `REACT_APP_` se estiver usando CRA) para expor as variáveis ao *bundle* da aplicação.
+
+| Variável | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `VITE_API_URL` | URL base do endpoint do Backend Spring Boot. | `http://localhost:8080/api` |
+| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui` |
+| `VITE_GOOGLE_MAPS_KEY` | Chave de API para serviços de mapas (Opcional). | `AIzaSy...` |
+
+---
+
+#### 3. Exemplos de Variáveis de Ambiente na Vercel
+
+A Vercel permite configurar variáveis no painel (Project Settings > Environment Variables).
+Aqui estão exemplos comuns utilizadas em aplicações front-end e full-stack:
+
+---
+
+
 ## 🎥 Demonstração
 
 Use GIFs e prints para mostrar o projeto em ação.
