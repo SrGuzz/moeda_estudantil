@@ -141,18 +141,6 @@ Para melhor visualização e entendimento da estrutura do sistema, os diagramas 
 
 ---
 
-## 🔧 Instalação e Execução
-
-### Pré-requisitos
-Certifique-se de que o usuário tenha o ambiente configurado.
-
-* **Java JDK:** Versão **17** ou superior (Necessário para o **Back-end Spring Boot**)
-* **Node.js:** Versão LTS (v18.x ou superior) (Necessário para o **Front-end React**)
-* **Gerenciador de Pacotes:** npm ou yarn
-* **Docker** (Opcional, mas **altamente recomendado** para rodar o Banco de Dados)
-
----
-
 ### 🔑 Variáveis de Ambiente
 
 Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
