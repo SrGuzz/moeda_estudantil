@@ -16,14 +16,19 @@
                 <x-card >
                     <div class="grid gap-y-5">
                         <div class="grid gap-5">
-                            <div class="flex">
-                                <x-avatar class="mr-5" color="orange" borderless />
-                                <div>
-                                    <p class="text-xl font-bold">{{$professor->user->name}}</p>
-                                    <div class="text-neutral-500 flex gap-x-2">
-                                        <x-icon name="identification" class="h-5 w-5" outline/>
-                                        <p>{{$this->mask_cpf($professor->cpf)}}</p>
+                            <div class="flex justify-between">
+                                <div class="flex">
+                                    <x-avatar class="mr-5" color="orange" borderless />
+                                    <div>
+                                        <p class="text-xl font-bold">{{$professor->user->name}}</p>
+                                        <div class="text-neutral-500 flex gap-x-2">
+                                            <x-icon name="envelope" class="h-5 w-5" outline/>
+                                            <p>{{$professor->user->email}}</p>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="text-end">
+                                    <x-badge text="{{$professor->cpf}}" icon="identification" position="left" color="orange" light />
                                 </div>
                             </div>
                             <div class="flex justify-between bg-orange-100/80 py-5 rounded-md dark:bg-neutral-900">

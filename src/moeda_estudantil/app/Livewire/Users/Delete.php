@@ -6,12 +6,15 @@ use App\Livewire\Traits\Alert;
 use App\Models\User;
 use Livewire\Attributes\Renderless;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Delete extends Component
 {
     use Alert;
 
     public User $user;
+
+    use Interactions;
 
     public function render(): string
     {
@@ -37,6 +40,6 @@ class Delete extends Component
 
         $this->dispatch('deleted');
 
-        $this->success();
+        $this->toast()->success();
     }
 }

@@ -8,6 +8,7 @@ use Livewire\Attributes\On;
 use Livewire\Component;
 use TallStackUi\Traits\Interactions;
 
+
 class Delete extends Component
 {
     use Interactions;
@@ -37,7 +38,7 @@ class Delete extends Component
         $this->aluno->endereco->delete();
         $this->aluno->user->delete();
         $this->reset('aluno');
-        $this->success();
+        $this->toast()->success();
         $this->dispatch('deleted');
     }
 }

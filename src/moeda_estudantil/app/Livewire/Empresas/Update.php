@@ -10,10 +10,13 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Http;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Update extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public ?Empresa $empresa = null;
 
@@ -119,7 +122,7 @@ class Update extends Component
 
         $this->resetExcept(['empresa', 'endereco']);
 
-        $this->success();
+        $this->toast()->success();
     }
 
     public function updatedEnderecoCep()

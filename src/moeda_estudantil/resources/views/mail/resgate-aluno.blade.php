@@ -13,7 +13,7 @@ Confira os detalhes do seu cupom de resgate:
 
 **Empresa:** {{ $resgate['empresa'] }}  
 **Valor do Cupom:** {{ $resgate['valor'] }}  
-**Criado em:** {{ \Carbon\Carbon::parse($resgate['data'])->format('d/m/Y H:i') }}  
+**Criado em:** {{ \Carbon\Carbon::createFromFormat('d/m/Y H:i', $resgate['data']) }}  
 
 @component('mail::panel')
 **Codigo de Resgate:** {{$resgate['codigo_resgate']}}

@@ -9,10 +9,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use TallStackUi\Traits\Interactions;
 
 class Create extends Component
 {
     use Alert;
+
+    use Interactions;
 
     use WithFileUploads;
 
@@ -69,7 +72,7 @@ class Create extends Component
         $this->reset();
         $this->mount();
 
-        $this->success();
+        $this->toast()->success();
     }
 
 }

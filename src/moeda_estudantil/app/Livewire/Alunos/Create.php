@@ -10,10 +10,13 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Create extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public User $user;
 
@@ -131,7 +134,7 @@ class Create extends Component
         $this->aluno = new Aluno();
         $this->endereco = new Endereco();
 
-        $this->success();
+        $this->toast()->success();
     }
 
     public function updatedEnderecoCep()

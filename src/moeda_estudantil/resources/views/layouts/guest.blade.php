@@ -16,9 +16,28 @@
     </head>
     <body class="font-sans text-gray-900 antialiased">
 
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
+        <div class="min-h-screen grid grid-cols-2 sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+            <div class="hidden lg:flex lg:w-full h-full relative overflow-hidden">
+                <div 
+                    class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url({{ asset('/assets/images/bg-login.jpg'); }})">
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-400/80 to-orange-400/70"> </div>
+                <div class="relative z-10 w-full flex flex-col justify-center items-center text-white p-12">
+                    <div class="max-w-md text-center space-y-6">
+                        <h1 class="text-4xl font-bold leading-tight">
+                            Bem-vindo à Moeda Estudantil
+                        </h1>
+                        <p class="text-lg text-white/90">
+                            Sistema peer-to-peer descentralizado para transações estudantis
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid justify-center items-center">
+                <div class="mt-6 px-6 py-4 bg-white shadow-md sm:rounded-xl">
+                    {{ $slot }}
+                </div>
             </div>
         </div>
 

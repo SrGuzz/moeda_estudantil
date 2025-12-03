@@ -14,7 +14,7 @@ Confira os detalhes abaixo:
 
 **Aluno:** {{ $resgate['aluno'] }}  
 **Valor do Cupom:** {{ $resgate['valor'] }}  
-**Data do Resgate:** {{ \Carbon\Carbon::parse($resgate['data'])->format('d/m/Y H:i') }}
+**Data do Resgate:** {{ \Carbon\Carbon::createFromFormat('d/m/Y H:i', $resgate['data']) }}
 
 @component('mail::panel')
 **Código de Resgate:** {{ $resgate['codigo_resgate'] }}

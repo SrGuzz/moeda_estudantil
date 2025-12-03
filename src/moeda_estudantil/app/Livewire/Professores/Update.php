@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Update extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public $empresas;
 
@@ -110,6 +113,6 @@ class Update extends Component
 
         $this->resetExcept('empresas');
 
-        $this->success();
+        $this->toast()->success();
     }
 }

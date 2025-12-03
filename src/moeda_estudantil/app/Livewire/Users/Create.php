@@ -7,10 +7,13 @@ use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Create extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public User $user;
 
@@ -67,6 +70,6 @@ class Create extends Component
         $this->reset();
         $this->user = new User();
 
-        $this->success();
+        $this->toast()->success();
     }
 }

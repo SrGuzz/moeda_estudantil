@@ -11,10 +11,13 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Mail;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Transacao extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public ?Aluno $aluno;
 
@@ -88,7 +91,7 @@ class Transacao extends Component
         $this->resetExcept(['aluno', 'user']);
         $this->transacao = new ModelsTransacao();
 
-        $this->success();
+        $this->toast()->success();
     }
 
     public function enviar_email()

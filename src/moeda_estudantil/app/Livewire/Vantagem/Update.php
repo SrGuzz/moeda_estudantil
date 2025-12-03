@@ -12,10 +12,13 @@ use Illuminate\Validation\Rule;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use TallStackUi\Traits\Interactions;
 
 class Update extends Component
 {
     use Alert;
+
+    use Interactions;
 
     use WithFileUploads;
 
@@ -77,6 +80,6 @@ class Update extends Component
 
         $this->resetExcept('empresas');
 
-        $this->success();
+        $this->toast()->success();
     }
 }

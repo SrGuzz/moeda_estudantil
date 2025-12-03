@@ -12,10 +12,13 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Validation\Rule;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Create extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public Professor $professor;
 
@@ -100,7 +103,7 @@ class Create extends Component
         $this->reset();
         $this->mount();
 
-        $this->success();
+        $this->toast()->success();
     }
 
 }

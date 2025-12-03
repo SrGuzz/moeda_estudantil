@@ -9,21 +9,21 @@ trait Alert
 {
     use Interactions;
 
-    public function success(string $description = 'Task completed successfully.', string $title = 'Done!'): void
+    public function success(string $description = 'Tarefa concluida com sucesso.', string $title = 'Feito!'): void
     {
         $this->dialog()
             ->success(__($title), __($description))
             ->send();
     }
 
-    public function error(string $description = 'Something went wrong!', string $title = 'Ops!'): void
+    public function error(string $description = 'Não foi possivel concluir sua tarefa!', string $title = 'Ops!'): void
     {
         $this->dialog()
             ->error(__($title), __($description))
             ->send();
     }
 
-    public function warning(string $description = 'Hey! This is dangerous.', string $title = 'Ops!'): void
+    public function warning(string $description = 'Sua tarefa requer atenção.', string $title = 'Ops!'): void
     {
         $this->dialog()
             ->warning(__($title), __($description))

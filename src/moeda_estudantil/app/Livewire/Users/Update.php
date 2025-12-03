@@ -8,10 +8,13 @@ use Illuminate\Contracts\View\View;
 use Illuminate\Validation\Rule;
 use Livewire\Attributes\On;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Update extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public ?User $user;
 
@@ -69,6 +72,6 @@ class Update extends Component
 
         $this->resetExcept('user');
 
-        $this->success();
+        $this->toast()->success();
     }
 }

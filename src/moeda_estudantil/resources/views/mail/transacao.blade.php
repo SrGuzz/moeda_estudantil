@@ -6,7 +6,7 @@ Olá, **{{ $transacao['destinatario'] }}**!
 Uma nova transação foi registrada no sistema.
 
 @component('mail::panel')
-**📅 Data:** {{ $transacao['data'] }}  
+**📅 Data:** {{ $createFromFormat('d/m/Y H:i', $transacao['data']) }}  
 **👨‍🏫 Professor:** {{ $transacao['professor'] }}  
 **🎓 Aluno:** {{ $transacao['aluno'] }}  
 **💰 Valor:** R$ {{ $transacao['moedas'] }}

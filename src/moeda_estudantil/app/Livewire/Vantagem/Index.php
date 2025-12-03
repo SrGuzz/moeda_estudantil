@@ -125,7 +125,7 @@ class Index extends Component
 
         
         $this->reset('vantagem');
-        $this->dialog()->success('Resgate Efetuado!', "Voce resgatou a vantagem {$resgate->vantagem->nome} por {$resgate->valor} moedas")->send();
+        $this->toast()->success('Resgate Efetuado!', "Voce resgatou a vantagem {$resgate->vantagem->nome} por {$resgate->valor} moedas")->send();
         
         Mail::to($resgate->aluno->user->email)->send(new ResgateAlunoMail($mail));
         Mail::to($resgate->vantagem->empresa->user->email)->send(new ResgateEmpresaMail($mail));

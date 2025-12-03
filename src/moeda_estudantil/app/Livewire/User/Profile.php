@@ -9,10 +9,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Livewire\Component;
+use TallStackUi\Traits\Interactions;
 
 class Profile extends Component
 {
     use Alert;
+
+    use Interactions;
 
     public User $user;
 
@@ -58,6 +61,6 @@ class Profile extends Component
 
         $this->resetExcept('user');
 
-        $this->success();
+        $this->toast()->success();
     }
 }
