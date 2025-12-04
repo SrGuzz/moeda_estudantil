@@ -58,8 +58,7 @@ ENV APP_ENV=production \
 EXPOSE 8000
 
 # 12) Comando de inicialização no Render
-CMD php artisan migrate --force && \
-    php artisan package:discover --ansi && \
+CMD php artisan package:discover --ansi && \
     php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \
