@@ -7,13 +7,15 @@ use App\Livewire\Resgate\Index as ResgateIndex;
 use App\Livewire\Transacoes\Index as TransacoesIndex;
 use App\Livewire\User\Profile;
 use App\Livewire\User\Resgate;
-use App\Livewire\User\Vantagens;
+use App\Livewire\Password\Reset;
+use App\Livewire\Password\Recovery;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Users\Index;
 use App\Livewire\Vantagem\Index as VantagemIndex;
 
 Route::get('/resgate', ResgateIndex::class)->name('resgate');
-
+Route::get('/reset-password', Reset::class)->name('reset-password');
+Route::get('/password/recovery/{token}', Recovery::class)->name('recovery-password');
 Route::view('/', 'welcome')->name('welcome');
 
 Route::middleware(['auth'])->group(function () {

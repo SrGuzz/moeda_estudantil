@@ -18,8 +18,8 @@
             <div class="flex justify-between my-8">
                 <x-checkbox label="Lebrar-me" id="remember_me" color="orange" type="checkbox" name="remember" />
                 @if (Route::has('register'))
-                    <a class="text-sm text-orange-400 hover:text-orange-800 rounded-md" href="{{ route('register') }}">
-                        Registre-se
+                    <a class="text-sm text-orange-400 hover:text-orange-800 rounded-md" href="{{ route('reset-password') }}">
+                        Esqueceu a senha?
                     </a>
                 @endif
             </div>
@@ -30,7 +30,7 @@
                 </x-button>
             </div>
 
-            <div class="text-center mt-5 text-lg text-muted-foreground">
+            <div class="text-center my-5 text-lg text-muted-foreground">
                 Não tem uma conta? 
                 <a href="#" class="text-orange-400 font-semibold">
                 Cadastre-se
