@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 
-# Imagem base com PHP 8.3 em Debian
+# 1) Imagem base com PHP 8.3
 FROM php:8.3-cli-bullseye
 
-# 1) Dependências do sistema + Node.js
+# 2) Dependências do sistema + Node.js
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get install -y nodejs \
     && rm -rf /var/lib/apt/lists/*
 
-# 2) Extensões PHP necessárias para Laravel
+# 3) Extensões PHP usadas pelo Laravel
 RUN docker-php-ext-install \
     pdo \
     pdo_mysql \
@@ -28,46 +28,38 @@ RUN docker-php-ext-install \
     bcmath \
     pcntl
 
-# 3) Instala o Composer
+# 4) Instala o Composer
 RUN curl -sS https://getcomposer.org/installer | php -- \
       --install-dir=/usr/local/bin --filename=composer
 
-# Diretório da aplicação
+# 5) Diretório de trabalho dentro do container
 WORKDIR /var/www/html
 
-# 4) Copia só os manifests para aproveitar cache no build
-COPY composer.json composer.lock* ./
-COPY package.json package-lock.json* ./
-COPY vite.config.* tailwind.config.* postcss.config.* ./
-
-# 5) Instala dependências PHP (sem dev) e JS
-RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-RUN npm install
-
-# 6) Copia o restante do código da aplicação
+# 6) Copia TODO o projeto (já estamos dentro de src/moeda_estudantil no build)
 COPY . .
 
-# 7) Build dos assets (Vite/Tailwind/TailstackUI)
-RUN npm run build
+# 7) Instala dependências PHP (sem rodar scripts que chamam artisan aqui)
+RUN composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
-# 8) Ajusta permissões da pasta storage
+# 8) Instala dependências JS e builda assets (Tailwind / TailstackUI / Vite)
+RUN npm install && npm run build
+
+# 9) Permissões de storage e cache
 RUN chown -R www-data:www-data storage bootstrap/cache \
     && chmod -R 775 storage bootstrap/cache
 
-# 9) Variáveis padrão (Render vai sobrescrever no painel)
+# 10) Variáveis padrão (Render vai sobrescrever)
 ENV APP_ENV=production \
     APP_DEBUG=false \
     LOG_CHANNEL=stderr \
     LOG_LEVEL=info
 
-# Porta interna (Render injeta $PORT)
+# 11) Porta que o app vai ouvir
 EXPOSE 8000
 
-# 10) Comando de inicialização
-# - Roda migrations
-# - Gera caches
-# - Sobe o servidor embutido do Laravel na porta $PORT
+# 12) Comando de inicialização no Render
 CMD php artisan migrate --force && \
+    php artisan package:discover --ansi && \
     php artisan config:cache && \
     php artisan route:cache && \
     php artisan view:cache && \
