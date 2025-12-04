@@ -91,7 +91,7 @@ class Transacao extends Component
         $this->resetExcept(['aluno', 'user']);
         $this->transacao = new ModelsTransacao();
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 
     public function enviar_email()

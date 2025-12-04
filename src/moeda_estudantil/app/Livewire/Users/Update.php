@@ -72,6 +72,6 @@ class Update extends Component
 
         $this->resetExcept('user');
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 }

@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-10 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 gap-10">
         @foreach($this->professores as $professor)
             <div class="hover:shadow-card-hover transition-all duration-300 hover:scale-[1.02]">
                 <x-card >

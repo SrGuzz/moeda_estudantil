@@ -38,7 +38,7 @@ class Delete extends Component
         $this->aluno->endereco->delete();
         $this->aluno->user->delete();
         $this->reset('aluno');
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
         $this->dispatch('deleted');
     }
 }

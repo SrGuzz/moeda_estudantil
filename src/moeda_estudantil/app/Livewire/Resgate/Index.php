@@ -54,6 +54,6 @@ class Index extends Component
     {
         $this->resgate->status = 0;
         $this->resgate->save();
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 }

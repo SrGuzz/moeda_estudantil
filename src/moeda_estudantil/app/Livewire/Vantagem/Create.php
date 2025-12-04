@@ -72,7 +72,7 @@ class Create extends Component
         $this->reset();
         $this->mount();
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 
 }

@@ -113,6 +113,6 @@ class Update extends Component
 
         $this->resetExcept('empresas');
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 }

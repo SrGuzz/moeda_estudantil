@@ -134,7 +134,7 @@ class Create extends Component
         $this->aluno = new Aluno();
         $this->endereco = new Endereco();
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 
     public function updatedEnderecoCep()

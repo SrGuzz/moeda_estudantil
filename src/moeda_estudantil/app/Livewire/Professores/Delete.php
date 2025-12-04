@@ -36,7 +36,7 @@ class Delete extends Component
     {
         $this->professor->user->delete();
         $this->reset('professor');
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
         $this->dispatch('deleted');
     }
 }

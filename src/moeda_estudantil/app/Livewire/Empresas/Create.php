@@ -117,7 +117,7 @@ class Create extends Component
         $this->dispatch('created');
 
         $this->reset();
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 
     public function updatedEnderecoCep()

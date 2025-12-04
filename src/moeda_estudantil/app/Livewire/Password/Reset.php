@@ -56,7 +56,6 @@ class Reset extends Component
         catch (\Exception $e) 
         {
             $this->toast()->error(
-                'Opss!',
                 'Erro ao salvar, por gentileza entre em contato com o time de TI',
             );
         }

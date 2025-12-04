@@ -38,7 +38,7 @@ class Delete extends Component
         $this->empresa->endereco->delete();
         $this->empresa->delete();
         $this->reset('empresa');
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
         $this->dispatch('deleted');
     }
 }

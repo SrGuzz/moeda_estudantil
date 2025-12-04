@@ -133,7 +133,7 @@ class Update extends Component
 
         $this->reset();
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 
     public function updatedEnderecoCep()

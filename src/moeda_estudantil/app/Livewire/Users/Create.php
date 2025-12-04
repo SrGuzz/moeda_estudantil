@@ -70,6 +70,6 @@ class Create extends Component
         $this->reset();
         $this->user = new User();
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 }

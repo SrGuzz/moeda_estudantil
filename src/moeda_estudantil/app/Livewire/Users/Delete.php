@@ -40,6 +40,6 @@ class Delete extends Component
 
         $this->dispatch('deleted');
 
-        $this->toast()->success();
+        $this->toast()->success("Registro efetuado com sucesso!");
     }
 }
