@@ -1,94 +1,191 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/SrGuzz/moeda_estudantil)
-![GitHub language count](https://img.shields.io/github/languages/count/SrGuzz/moeda_estudantil)
-![GitHub forks](https://img.shields.io/github/forks/SrGuzz/moeda_estudantil)
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=99999999&assignment_repo_type=AssignmentRepo) [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=99999999)
 
-# Sistema de Moeda Estudantil
+---
+
+# 🏷️ Sistema de Moeda Estudantil ✨
+
+- Breve descrição do projeto. **Foque no principal valor/benefício.**
+- Crie uma **logo** para o projeto que represente a aplicação em questão.
+
+<table>
+  <tr>
+    <td width="800px">
+      <div align="justify">
+        Este é um template/exemplo de <b>README.md</b> estruturado, criado para servir como um <b>modelo acadêmico e profissional</b> que os estudantes podem utilizar em seus projetos de desenvolvimento. Ele reúne as <i>seções essenciais</i> recomendadas pelo <a href="https://github.com/joaopauloaramuni">Prof. Dr. João Paulo Aramuni</a>, permitindo <i>organização clara</i>, <i>documentação eficiente</i> e <i>padronização</i> entre diferentes trabalhos. O objetivo deste esqueleto é <b>facilitar a construção de projetos bem documentados</b>, oferecendo um <i>guia completo</i> que inclui <b>boas práticas</b>, instruções de execução, tecnologias utilizadas, arquitetura, estruturas de pastas, testes, links úteis e orientações para colaboração. Esse template ajuda estudantes a desenvolverem <b>documentação de qualidade profissional</b> desde os primeiros períodos, promovendo <i>clareza</i>, <i>reprodutibilidade</i> e <i>padronização</i> nos projetos.
+      </div>
+    </td>
+    <td>
+      <div>
+        <img src="https://joaopauloaramuni.github.io/image/logo_ES_vertical.png" alt="Logo do Projeto" width="120px"/>
+      </div>
+    </td>
+  </tr> 
+</table>
+
+---
+
+## 📚 Índice
+
+- [Links Úteis](#-links-úteis)
+- [Sobre o Projeto](#-sobre-o-projeto)
+- [Funcionalidades Principais](#-funcionalidades-principais)
+- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [Arquitetura](#-arquitetura)
+  - [Exemplos de diagramas](#exemplos-de-diagramas)
+- [Deploy](#-deploy)
+- [Estrutura de Pastas](#-estrutura-de-pastas)
+- [Demonstração](#-demonstração)
+  - [Aplicativo Mobile](#-aplicativo-mobile)
+  - [Aplicação Web](#-aplicação-web)
+  - [Exemplo de saída no Terminal (para Back-end, API, CLI)](#-exemplo-de-saída-no-terminal-para-back-end-api-cli)
+- [Testes](#-testes)
+- [Documentações utilizadas](#-documentações-utilizadas)
+- [Autores](#-autores)
+- [Contribuição](#-contribuição)
+- [Agradecimentos](#-agradecimentos)
+- [Licença](#-licença)
+
+---
+
+## 🔗 Links Úteis
+
+- 🌐 **Demo Online:** [Acesse a Aplicação Web](link-da-demo-web)
+  > 💻 **Descrição:** Link para a aplicação em ambiente de produção (Ex: hospedado na Vercel, Netlify ou AWS S3).
+- 📖 **Documentação:** [Leia a Wiki/Docs](docs)
+  > 📚 **Descrição:** Acesso à documentação técnica completa do projeto (Ex: Swagger/OpenAPI para API, ou Wiki interna).
+
+---
+
+## 📝 Sobre o Projeto
+
+- **Por que ele existe** — Esse sistema foi desenvolvido para a materia Laboratorio de Desenvolvimento de Software, do curso de Engenharia de Software da PUC-Minas.
+- **Qual problema ele resolve** — Ele resolve um problema hipotético, no qual uma escola quer um sistema de moeda estudantil em que empresas possam participar e os alunos consigam resgatar. brindes e vantagens pelo sistema.
+- **Qual o contexto** — acadêmico.
+- **Onde ele pode ser utilizado** — Ele pode ser usado em escolas ou faculdades.
+
+---
+
+## ✨ Funcionalidades Principais
+
+Liste as funcionalidades de forma clara e objetiva.
+
+- 🔐 **Autenticação Segura:** Login, Cadastro e Recuperação de Senha.
+- 📈 **Painel de Controle:** Visualização de dados em tempo real com gráficos.
+- ⚙️ **Gerenciamento de CRUD:** Criação, Leitura, Atualização e Deleção de recursos (e.g., Usuários, Itens).
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+\*TallStackUI.
+
+### 💻 Front-end
+
+- **Framework/Biblioteca:** Livewire
+- **Linguagem/Superset:** PHP
+- **Estilização:** Tailwind CSS
+- **Build Tool:** Vite
+
+### 🖥️ Back-end
+
+- **Linguagem/Runtime:** PHP
+- **Framework:** Laravel
+- **Banco de Dados:** MySQL
+- **ORM / Query Builder:** Composer
+- **Autenticação:** Laravel Jetstream
+
+---
+
+## 🏗 Arquitetura
+
+Descreva aqui a **arquitetura completa do sistema**, explicando como as camadas, módulos e componentes foram organizados. Informe também **por que** essa arquitetura foi escolhida e **quais problemas ela ajuda a resolver**.
+
+Você pode incluir:
+
+- **Visão geral da arquitetura** (ex.: camadas, módulos, microsserviços, monólito modular, hexagonal, MVC etc.)
+- **Principais componentes** e o papel de cada um
+- **Padrões de design adotados** (ex.: Repository, Service Layer, DTOs, Factory, Observer)
+- **Fluxo de dados** entre as partes do sistema
+- **Tecnologias utilizadas em cada camada**
+- **Decisões arquiteturais importantes**
+- **Trade-offs** ou limitações relevantes
 
 
+---
 
-## 🚀 Tecnologias Utilizadas
+### 🔑 Variáveis de Ambiente
+
+Crie arquivos `.env` específicos e/ou configure as variáveis de ambiente no seu sistema para cada parte da aplicação.
+
+#### 1 Back-end (Spring Boot)
+
+Configure estas variáveis como **variáveis de ambiente do sistema** ou em um arquivo de configuração do Spring (ex: `application.properties`/`application.yml`).
+
+| Variável | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `SERVER_PORT` | Porta onde o Back-end será executado. | `8080` |
+| `SPRING_DATASOURCE_URL` | URL de conexão JDBC (PostgreSQL). | `jdbc:postgresql://localhost:5432/meubanco` |
+| `SPRING_DATASOURCE_USERNAME` | Usuário do banco de dados. | `postgres` |
+| `SPRING_DATASOURCE_PASSWORD` | Senha do banco de dados. | `senha-segura-123` |
+| `JWT_SECRET` | Chave secreta para assinatura de tokens (Opcional). | `chave_super_segura_base64` |
+
+#### 2 Front-end (React, Vite)
+
+Crie um arquivo **`.env`** na raiz da pasta `/frontend` e use o prefixo `VITE_` (ou `REACT_APP_` se estiver usando CRA) para expor as variáveis ao *bundle* da aplicação.
+
+| Variável | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `VITE_API_URL` | URL base do endpoint do Backend Spring Boot. | `http://localhost:8080/api` |
+| `VITE_EMAILJS_PUBLIC_KEY` | Chave pública para serviços de e-mail (Exemplo). | `sua_public_key_aqui` |
+| `VITE_GOOGLE_MAPS_KEY` | Chave de API para serviços de mapas (Opcional). | `AIzaSy...` |
+
+---
+
+#### 3. Exemplos de Variáveis de Ambiente na Vercel
+
+A Vercel permite configurar variáveis no painel (Project Settings > Environment Variables).
+Aqui estão exemplos comuns utilizadas em aplicações front-end e full-stack:
+
+---
 
 
+## 🎥 Demonstração
 
-### **Front-end:**
+Use GIFs e prints para mostrar o projeto em ação.
 
-- **React** com **Vite**: Para uma interface de usuário rápida e reativa.
-- **TypeScript**: Para garantir a tipagem e a robustez do código.
-- **Tailwind CSS** & **Shadcn UI**: Para a construção de um layout moderno, responsivo e acessível.
-- **React Router Dom**: Para o gerenciamento de rotas da aplicação.
+Dê preferência a hospedar suas imagens em um **CDN** (Content Delivery Network) ou no **GitHub Pages** para garantir que elas carreguem rapidamente e não quebrem.
 
-<a href="https://react.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/></a>
-<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/></a>
-<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/></a>
-<a href="https://vitejs.dev/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vitejs/vitejs-original.svg" alt="vite" width="40" height="40"/></a>
+### 🌐 Aplicação Web
 
-### **Back-end:**
+Para melhor visualização, as telas principais estão organizadas lado a lado.
 
-- **Java** & **Spring Boot**: Para a construção de uma API REST robusta e segura.
-- **Spring Security**: Para autenticação e autorização baseadas em JWT (JSON Web Tokens).
-- **JPA / Hibernate**: Para o mapeamento objeto-relacional e persistência de dados.
-- **MySQL**: Como banco de dados relacional para armazenar todas as informações.
+|                                                                 Tela                                                                  |                                                           Captura de Tela                                                            |
+| :-----------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------: |
+|                                                       **Página Inicial (Home)**                                                       |                                                         **Página de Login**                                                          |
+| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Inicial da Aplicação Web" width="120px" height="120px"> |        <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Login" width="120px" height="120px">         |
+|                                                       **Cadastro de Clientes**                                                        |                                                       **Cadastro de Produtos**                                                       |
+| <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Clientes" width="120px" height="120px">  | <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Cadastro de Produtos" width="120px" height="120px"> |
+|                                                      **Dashboard (Visão Geral)**                                                      |                                                   **Página Admin / Configurações**                                                   |
+|       <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela de Dashboard" width="120px" height="120px">       |     <img src="https://joaopauloaramuni.github.io/image/aramunilogo.png" alt="Tela Administrativa" width="120px" height="120px">      |
 
-<a href="https://spring.io/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original-wordmark.svg" alt="spring" width="40" height="40"/></a>
-<a href="https://www.java.com" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original-wordmark.svg" alt="java" width="40" height="40"/></a>
-<a href="https://www.mysql.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/></a>
-<a href="https://jwt.io/" target="_blank" rel="noreferrer"><img src="https://img.icons8.com/color/48/000000/json-web-token.png" alt="jwt" width="40" height="40"/></a>
+## 🔗 Documentações utilizadas
 
-## 🖥️ Funcionalidades
+Liste aqui links para documentação técnica, referências de bibliotecas complexas ou guias de estilo que foram cruciais para o projeto.
 
-A plataforma oferece funcionalidades distintas para cada tipo de usuário:
+- 📖 **Framework/Biblioteca (Front-end):** [Documentação Oficial do **React**](https://react.dev/reference/react)
+- 📖 **Build Tool (Front-end):** [Guia de Configuração do **Vite**](https://vitejs.dev/config/)
+- 📖 **Framework (Back-end):** [Documentação Oficial do **Spring Boot**](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+- 📖 **Containerização:** [Documentação de Referência do **Docker**](https://docs.docker.com/)
+- 📖 **Guia de Estilo:** [**Conventional Commits** (Padrão de Mensagens)](https://www.conventionalcommits.org/en/v1.0.0/)
+- 📖 **Documentação Interna:** [Design System do Projeto](./docs/design-system.md)
 
-### **Para Clientes:**
+---
 
-- **Dashboard Pessoal**: Visualização rápida de estatísticas como pedidos ativos, contratos vigentes e histórico total.
-- **Criação de Pedidos**: Um fluxo guiado de 4 passos para solicitar um novo aluguel de veículo.
-- **Histórico de Pedidos**: Uma tela dedicada para listar, visualizar e filtrar todos os pedidos de aluguel já realizados.
-- **Cancelamento de Pedidos**: Possibilidade de cancelar um pedido que ainda esteja com o status "RESERVADA".
-- **Cadastro e Autenticação**: Sistema seguro de criação de conta e login.
+## 👥 Autores
 
-### **Para Agentes:**
+Liste os principais contribuidores. Você pode usar links para seus perfis.
 
-- **Dashboard Administrativo**: Visão geral de todas as locações, com foco em pedidos pendentes de análise.
-- **Gerenciamento de Locações**: Tela para visualizar **todas** as locações de **todos** os clientes.
-- **Aprovação e Rejeição**: Ferramentas para alterar o status de um pedido de "RESERVADA" para "ATIVA" (aprovado) ou "CANCELADA" (rejeitado).
-- **Filtros Avançados**: Capacidade de filtrar locações por status, cliente ou veículo.
-
-## 📂 Estrutura e Fluxo do Projeto
-
-1.  **Autenticação** → Usuário se cadastra ou faz login, recebendo um token JWT.
-2.  **Dashboard** → O usuário é direcionado para um dashboard personalizado de acordo com seu nível de acesso (Cliente ou Agente).
-3.  **Criação de Pedido (Cliente)** → O cliente passa por um formulário de múltiplos passos para escolher o veículo, período e fornecer dados pessoais/profissionais.
-4.  **Listagem de Pedidos (Cliente)** → O cliente pode ver o status de todos os seus pedidos.
-5.  **Gerenciamento (Agente)** → O agente visualiza todos os pedidos, podendo filtrá-los e tomar ações como aprovar ou rejeitar.
-
-## 🌐 Deploy
-
-O projeto pode ser acessado online através do seguinte link:
-
-[Acessar a Aplicação](https://SEU-LINK-AQUI.com/)
-
-## 📸 Preview
-
-<img src="artefatos/GifProjetoLocadora.gif" alt="Preview do projeto AutoLux Rental">
-
-## 👥 Desenvolvedor
-
-- Davi Benjamim Guimarães
-- Albert Luis Pereira de Jesus
-- Jonas Rafael Martins
-
-## 📬 Contato
-
-Caso queira entrar em contato:
-
-- ✉️ Email: `davibenjamimguimaraes@gmail.com`
-- 🔗 LinkedIn: [Davi Benjamim Guimarães](https://www.linkedin.com/in/davi-benjamim-guimar%C3%A3es-b82741288/)
-- 🐙 GitHub: [ArtMix532](https://github.com/ArtMix532)
-
-- ✉️ Email: `albertluis123y88@gmail.com`
-- 🔗 LinkedIn: [Albert Luis Pereira de Jesus](https://www.linkedin.com/in/albert-luis/)
-- 🐙 GitHub: [SrGuzz](https://github.com/SrGuzz)
-
-- ✉️ Email: `jonasrmartins17@gmail.com`
-- 🔗 LinkedIn: [Jonas Rafael Martins](https://www.linkedin.com/in/SEU-LINKEDIN-AQUI/)
-- 🐙 GitHub: [Kjonps](https://github.com/Kjonps)
+| 👤 Nome                 | 🖼️ Foto                                                                                                                   | :octocat: GitHub                                                                                                                                                    | 💼 LinkedIn                                                                                                                                                         |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Davi Benjamim Guimaraes | <div align="center"><img src="https://github.com/ArtMix532.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/ArtMix532"><img src="https://joaopauloaramuni.github.io/image/github2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/davi-benjamim-guimar%C3%A3es-b82741288/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> |
+| Albert Luis Pereira de Jesus | <div align="center"><img src="https://github.com/SrGuzz.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/SrGuzz"><img src="https://joaopauloaramuni.github.io/image/github2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/albert-luis/"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> |
