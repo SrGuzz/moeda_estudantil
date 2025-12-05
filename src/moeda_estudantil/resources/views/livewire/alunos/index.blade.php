@@ -5,7 +5,9 @@
             <p class="text-neutral-500">Total de {{count($this->alunos)}} alunos cadastrados</p>
         </div>
         <div class="flex items-end gap-5">
-            <livewire:alunos.create @created="$refresh" />
+            @if (auth()->user()->email == 'albertluis123y88@gmail.com')
+                <livewire:alunos.create @created="$refresh" />
+            @endif
             <x-input class="" icon="magnifying-glass" position="right" wire:model.live.debounce="search"/>
         </div>
     </div>
@@ -71,10 +73,12 @@
                         
                         <div class="flex justify-end gap-4">
                             @if (auth()->user()->professor)
-                            <x-button.circle color="green" icon="banknotes" wire:click="$dispatch('transacao::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>    
+                                <x-button.circle color="green" icon="banknotes" wire:click="$dispatch('transacao::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>    
                             @endif
-                            <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
-                            <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
+                            @if (auth()->user()->email == 'albertluis123y88@gmail.com')
+                                <x-button.circle color="yellow" icon="pencil" wire:click="$dispatch('load::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
+                                <x-button.circle color="red" icon="trash" wire:click="$dispatch('delete::aluno', { 'aluno' : '{{ $aluno->id }}'})" light/>
+                            @endif
                         </div>
                     </div>
                 </x-card>

@@ -5,7 +5,9 @@
             <p class="text-neutral-500">Total de {{count($this->professores)}} professores cadastrados</p>
         </div>
         <div class="flex items-end gap-5">
-            <livewire:professores.create @created="$refresh" />
+            @if (auth()->user()->email == 'albertluis123y88@gmail.com')
+                <livewire:professores.create @created="$refresh" />
+            @endif
             <x-input class="" icon="magnifying-glass" position="right" wire:model.live.debounce="search"/>
         </div>
     </div>

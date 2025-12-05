@@ -5,7 +5,7 @@
             <p class="text-neutral-500">Total de {{count($this->vantagens)}} vantagem cadastradas</p>
         </div>
         <div class="flex items-end gap-5">
-            @if (auth()->user()->empresa)
+            @if (auth()->user()->email == 'albertluis123y88@gmail.com')
                 <livewire:vantagem.create @created="$refresh" />
             @endif
             <x-input class="" icon="magnifying-glass" position="right" wire:model.live.debounce="search"/>
